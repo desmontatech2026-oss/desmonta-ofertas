@@ -1,0 +1,1126 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Desmonta Ofertas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="🔥 Mais de __TOTAL__ ofertas no ar agora: Shopee, Mercado Livre e Amazon. A gente desmonta o preço antes de você comprar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,700..900&family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: vitrine escura de app; topo fixo com abas, cards em 2 colunas no celular, ferramentas de dúvida embaixo. Verde = preço bom, vermelho só na Black Friday. */
+:root{
+  --bg:#050607;--surface:#0D1013;--surface-2:#161B20;--line:#242B32;--ink:#F2F5F7;--muted:#8B95A1;
+  --green:#22D47B;--green-ink:#03140A;--green-soft:rgba(34,212,123,.14);--red:#FF4457;--red-soft:rgba(255,68,87,.13);
+  --bf-bg:#FFFFFF;--bf-ink:#070707;--bf-red:#E3001B;
+  --photo:#FFFFFF;--photo-ink:#5A6570;--photo-veil:rgba(8,10,12,.62);--on-photo:#FFFFFF;
+  --f-display:'Archivo','Arial Narrow',system-ui,sans-serif;
+  --f-body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --fire:#FF4D2E;--fire-core:#FFC93C;--shine:#E9FFF3;
+  --art-bg:#050607;--art-ink:#FFFFFF;--art-green:#22D47B;--art-red:#FF4457;
+  --r:16px;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#F3F5F6;--surface:#FFFFFF;--surface-2:#ECEFF2;--line:#DCE1E6;--ink:#0A0D10;--muted:#5A6470;
+    --green:#078F4A;--green-ink:#FFFFFF;--shine:#46E89A;--green-soft:rgba(7,143,74,.10);--red:#D8132A;--red-soft:rgba(216,19,42,.09);
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#F3F5F6;--surface:#FFFFFF;--surface-2:#ECEFF2;--line:#DCE1E6;--ink:#0A0D10;--muted:#5A6470;
+  --green:#078F4A;--green-ink:#FFFFFF;--shine:#46E89A;--green-soft:rgba(7,143,74,.10);--red:#D8132A;--red-soft:rgba(216,19,42,.09);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+button{font-family:inherit}
+
+/* Topo */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:10px 8px}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);min-width:0}
+.gear{color:var(--green);flex:0 0 auto;animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.brand-name{font-family:var(--f-display);font-weight:900;font-stretch:120%;font-size:clamp(15px,4.4vw,20px);letter-spacing:.02em;line-height:1;white-space:nowrap}
+.brand-name b{color:var(--green);font-weight:900}
+.acts{display:flex;gap:8px;align-items:center;flex:0 0 auto}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;text-decoration:none;flex:0 0 auto}
+.icon-btn:hover{border-color:var(--muted)}
+.tabs{display:flex;gap:6px;padding-block:0 10px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:600 14px var(--f-body);cursor:pointer}
+.tab svg{flex:0 0 auto}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ic-fire .fo{transform-origin:12px 22px;animation:flick .8s ease-in-out infinite alternate}
+.ic-fire .fi{transform-origin:12px 22px;animation:flick2 .5s ease-in-out infinite alternate}
+@keyframes flick{0%{transform:scale(1,1) skewX(0deg)}50%{transform:scale(.95,1.07) skewX(-4deg)}100%{transform:scale(1.04,.96) skewX(4deg)}}
+@keyframes flick2{0%{transform:scale(1);opacity:1}100%{transform:scale(.8,1.15);opacity:.7}}
+.ic-clock{color:var(--green)}
+.ic-clock .hm{transform-origin:12px 12px;animation:spin 2.4s linear infinite}
+.ic-clock .hh{transform-origin:12px 12px;animation:spin 28s linear infinite}
+.ic-down{color:var(--green);overflow:visible}
+.ic-down .mv{animation:fall 1.1s ease-in infinite}
+@keyframes fall{0%{transform:translate(-2px,-4px);opacity:0}25%{opacity:1}80%{opacity:1}100%{transform:translate(2px,4px);opacity:0}}
+
+/* Abertura */
+.hero{display:grid;gap:14px;padding-block:22px 4px}
+.live{display:inline-flex;align-items:center;gap:9px;font:700 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin:0}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--green);position:relative;flex:0 0 auto}
+.dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--green);animation:ping 1.6s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.8);opacity:0}}
+h1{font-family:var(--f-display);font-weight:900;font-stretch:112%;font-size:clamp(34px,8.6vw,64px);line-height:1.02;letter-spacing:-.02em;margin:0;max-width:15ch;text-wrap:balance}
+.dm{color:var(--green);display:inline-block;white-space:nowrap}
+.lt{display:inline-block;position:relative}
+.lt .t{display:inline-block;clip-path:inset(-10% -10% 50% -10%)}
+.lt .b{position:absolute;left:0;top:0;clip-path:inset(50% -10% -10% -10%)}
+.dm.go .lt{animation:go-s 2.6s cubic-bezier(.6,0,.3,1) var(--d) both}
+.dm.go .lt .t{animation:go-t 2.6s cubic-bezier(.6,0,.3,1) var(--d) both}
+.dm.go .lt .b{animation:go-b 2.6s cubic-bezier(.6,0,.3,1) var(--d) both}
+@keyframes go-s{0%{transform:none}30%,62%{transform:translateX(var(--s))}100%{transform:none}}
+@keyframes go-t{0%{transform:none}30%,62%{transform:translate(var(--x),var(--y)) rotate(var(--r))}100%{transform:none}}
+@keyframes go-b{0%{transform:none}30%,62%{transform:translate(var(--x2),var(--y2)) rotate(var(--r2))}100%{transform:none}}
+.dm{cursor:pointer}
+@keyframes spread{0%,30%{transform:none}46%,72%{transform:translateX(var(--s))}90%,100%{transform:none}}
+@keyframes half-t{0%,30%{transform:none}46%,72%{transform:translate(var(--x),var(--y)) rotate(var(--r))}90%,100%{transform:none}}
+@keyframes half-b{0%,30%{transform:none}46%,72%{transform:translate(var(--x2),var(--y2)) rotate(var(--r2))}90%,100%{transform:none}}
+.lede{margin:0;max-width:50ch;font-size:16.5px;color:var(--muted)}
+.stats{margin:0;display:flex;flex-wrap:wrap;gap:6px 18px;font:700 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.stats b{font-family:var(--f-display);font-weight:900;font-stretch:108%;font-size:clamp(22px,6vw,30px);letter-spacing:0;color:var(--green);margin-right:6px;font-variant-numeric:tabular-nums}
+.stats span{display:inline-flex;align-items:baseline}
+.chip.hot{}
+.empty .cards{margin-top:4px}
+
+/* Black Friday */
+.bf{background:var(--bf-bg);color:var(--bf-ink);border-radius:20px;padding:16px;display:grid;gap:12px;margin-top:6px;animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(227,0,27,.6)}70%{box-shadow:0 0 0 16px rgba(227,0,27,0)}100%{box-shadow:0 0 0 0 rgba(227,0,27,0)}}
+.bf-top{display:flex;align-items:baseline;justify-content:space-between;gap:6px 12px;flex-wrap:wrap}
+.bf-title{font-family:var(--f-display);font-weight:900;font-stretch:120%;font-size:clamp(30px,8.4vw,48px);line-height:.95;letter-spacing:.01em;margin:0}
+.bf-title .k{color:var(--bf-ink)}
+.bf-title .r{color:var(--bf-red)}
+.bf-date{font:700 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bf-red)}
+.clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.u{background:var(--bf-ink);color:var(--bf-bg);border-radius:12px;padding:10px 4px 8px;display:grid;justify-items:center;gap:2px}
+.u b{font-family:var(--f-display);font-weight:900;font-stretch:105%;font-size:clamp(28px,8.4vw,46px);line-height:1;font-variant-numeric:tabular-nums}
+.u small{font:700 10.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.u.s b{color:var(--bf-red)}
+.bf-note{margin:0;font-weight:700;font-size:15px}
+
+/* Busca */
+.find{display:grid;gap:10px;padding-block:20px 0}
+.search{position:relative}
+.search > svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.search input{width:100%;height:52px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 16px var(--f-body);padding:0 46px}
+.search input::placeholder{color:var(--muted)}
+.clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;background:none;color:var(--muted);cursor:pointer;border-radius:10px}
+.chips{display:flex;gap:7px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 13px;font:600 13.5px var(--f-body);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip i{font:700 11px var(--f-mono);font-style:normal;color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--surface);color:var(--green);border-color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+.chip[aria-pressed="true"] i{color:inherit;opacity:.8}
+
+/* Seções */
+.sec{padding-block:28px 4px;display:grid;gap:12px;scroll-margin-top:118px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px 12px;flex-wrap:wrap}
+h2{font-family:var(--f-display);font-weight:800;font-stretch:110%;font-size:clamp(22px,5.6vw,30px);line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.count{font:700 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0}
+.sub{margin:-4px 0 0;color:var(--muted);max-width:62ch}
+
+/* Cards */
+.cards{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(158px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.ph{position:relative;aspect-ratio:1/1;background:var(--photo);display:grid;place-items:center;max-width:100%}
+.ph img{width:88%;height:88%;object-fit:contain}
+.ph .ico{color:var(--photo-ink)}
+.off{position:absolute;left:8px;top:8px;background:var(--green);color:var(--green-ink);font:800 13px var(--f-body);padding:3px 8px;border-radius:8px;font-variant-numeric:tabular-nums}
+.share{position:absolute;right:6px;top:6px;width:36px;height:36px;border-radius:10px;background:var(--photo-veil);color:var(--on-photo);display:grid;place-items:center}
+.store{position:absolute;left:8px;bottom:8px;font:700 10px var(--f-mono);letter-spacing:.04em;text-transform:uppercase;padding:3px 7px;border-radius:6px;background:var(--photo-veil);color:var(--on-photo)}
+.cb{padding:10px 10px 12px;display:flex;flex-direction:column;gap:7px;flex:1;min-width:0}
+.ph-go{position:absolute;inset:0;z-index:1;border-radius:inherit}
+.ph .off,.ph .store{z-index:2;pointer-events:none}
+.ph .share{z-index:3}
+.ttl a{color:inherit;text-decoration:none}
+.ttl a:hover{text-decoration:underline;text-underline-offset:2px}
+.ttl{margin:0;font-size:13.5px;font-weight:500;line-height:1.3;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pr{display:grid;gap:0;line-height:1.15}
+.pr s{color:var(--muted);font-size:12.5px}
+.pr strong{font-family:var(--f-display);font-weight:900;font-stretch:104%;font-size:23px;color:var(--green);font-variant-numeric:tabular-nums}
+.pr small{font-size:11.5px;color:var(--muted);font-weight:500}
+.sig{display:flex;align-items:center;gap:7px;font:700 10.5px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--green)}
+.bars{display:inline-flex;align-items:flex-end;gap:2px;height:14px}
+.bars i{width:4px;border-radius:1.5px;background:var(--line)}
+.bars i:nth-child(1){height:5px}.bars i:nth-child(2){height:8px}.bars i:nth-child(3){height:11px}.bars i:nth-child(4){height:14px}
+.bars i.on{background:var(--green);animation:wave 1.6s ease-in-out infinite}
+.bars i.on:nth-child(2){animation-delay:.15s}.bars i.on:nth-child(3){animation-delay:.3s}.bars i.on:nth-child(4){animation-delay:.45s}
+@keyframes wave{0%,100%{opacity:1}50%{opacity:.35}}
+.flags{display:flex;flex-wrap:wrap;gap:4px}
+.flag{font:600 10.5px var(--f-body);padding:3px 6px;border-radius:6px;background:var(--green-soft);color:var(--green)}
+.flag.n{background:var(--surface-2);color:var(--muted)}
+.unit{margin:0;font:600 11.5px var(--f-mono);color:var(--ink)}
+.help{align-self:flex-start;border:0;background:none;padding:0;color:var(--green);font:600 12.5px var(--f-body);text-decoration:underline;text-underline-offset:3px;cursor:pointer;text-align:left}
+.target{display:grid;gap:0;line-height:1.15}
+.target small{font:700 10.5px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.target strong{font-family:var(--f-display);font-weight:900;font-size:21px;font-variant-numeric:tabular-nums}
+.verdict{margin:0;font-size:12.5px;color:var(--muted);line-height:1.4}
+.foot{display:grid;gap:6px;margin-top:auto}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:12px;background:var(--green);color:var(--green-ink);font:700 14.5px var(--f-body);text-decoration:none;border:1px solid var(--green);cursor:pointer;text-align:center}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--muted);filter:none}
+.btn.sm{min-height:40px;font-size:13.5px;padding:0 12px}
+.warn{margin:0;font-size:11px;color:var(--muted);line-height:1.35}
+.more{justify-self:center;min-width:220px}
+.empty{margin:0;padding:18px;border:1px dashed var(--line);border-radius:var(--r);color:var(--muted);display:grid;gap:10px}
+.empty b{color:var(--ink)}
+.out{display:flex;flex-wrap:wrap;gap:8px}
+
+/* Ferramentas */
+.tool-tabs{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none}
+.tool-tabs::-webkit-scrollbar{display:none}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:14px}
+.panel > p{margin:0}
+.fields{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
+.field{display:grid;gap:6px;min-width:0}
+.field label,.lbl{font:700 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{width:100%;min-height:46px;border-radius:11px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font:500 16px var(--f-body);padding:10px 12px}
+.field textarea{min-height:110px;resize:vertical}
+.check{display:flex;align-items:center;gap:10px;font-size:14.5px;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--green)}
+.res{border-radius:12px;padding:14px;background:var(--green-soft);display:grid;gap:4px}
+.res b{font-family:var(--f-display);font-weight:900;font-size:clamp(20px,5vw,26px);color:var(--green);line-height:1.15}
+.res p{margin:0}
+.res.bad{background:var(--red-soft)}
+.res.bad b{color:var(--red)}
+.tip{margin:0;font-size:13.5px;color:var(--muted)}
+.ref{width:100%;border-collapse:collapse;font-size:14px}
+.ref td{padding:7px 0;border-top:1px solid var(--line)}
+.ref td:last-child{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.seg{display:flex;flex-wrap:wrap;gap:7px}
+.result{border:1px dashed var(--green);border-radius:12px;padding:14px;display:grid;gap:10px}
+.result p{margin:0}
+#aMsg,#fbMsg{white-space:pre-line}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.err{margin:0;color:var(--red);font-size:14px}
+
+/* Dúvidas frequentes e regras */
+.faq{display:grid;gap:8px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 14px}
+.faq summary{cursor:pointer;padding:14px 0;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--green);font-weight:800}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:0 0 14px;color:var(--muted)}
+.rules{display:grid;gap:14px 20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));margin:0;padding:0;list-style:none}
+.rules li{border-top:1px solid var(--line);padding-top:12px;display:grid;gap:3px}
+.rules b{display:flex;gap:8px;align-items:center}
+.rules b svg{color:var(--green);flex:0 0 auto}
+.rules span{color:var(--muted);font-size:14.5px}
+.disclosure{font-size:13.5px;color:var(--muted);max-width:72ch;margin:0}
+footer{padding-block:34px 90px;color:var(--muted);font-size:13px;display:grid;gap:4px}
+footer p{margin:0}
+footer b{color:var(--ink)}
+
+/* Aviso de saída e toast */
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surface);border-top:1px solid var(--line);border-radius:20px 20px 0 0;padding-top:18px;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));box-shadow:0 -12px 40px rgba(0,0,0,.35)}
+.sheet-in{max-width:560px;margin:0 auto;display:grid;gap:10px}
+.sheet h3{margin:0;font-family:var(--f-display);font-weight:900;font-size:24px;line-height:1.1}
+.sheet p{margin:0;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:600;z-index:60;max-width:calc(100% - 32px)}
+
+
+/* Ao vivo */
+.livebar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font:700 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin:0}
+.onair{display:inline-flex;align-items:center;gap:7px;color:var(--red);background:var(--red-soft);padding:4px 9px;border-radius:6px}
+.rdot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:blink 1.2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+.upd{display:inline-flex;align-items:center;gap:8px;color:var(--green)}
+.next{color:var(--muted);display:inline-flex;gap:6px;align-items:baseline}
+.next b{color:var(--ink);font-variant-numeric:tabular-nums}
+.boom{display:inline-block;animation:boom .95s cubic-bezier(.6,0,.3,1) both}
+@keyframes boom{0%{transform:none}45%{transform:translate(var(--bx),var(--by)) rotate(var(--br))}100%{transform:none}}
+
+/* Foto em sprite */
+.ph .img{position:absolute;inset:0;background-size:1200% 500%;background-repeat:no-repeat}
+.pr strong.now{color:var(--ink)}
+.pr strong.az{font-size:18px}
+.share-row{display:flex;align-items:center;justify-content:center;gap:6px;font:600 12px var(--f-body);color:var(--green);text-decoration:none;padding:2px 0;text-align:center}
+.share-row:hover span{text-decoration:underline}
+
+/* Dicas */
+.tipcard{grid-column:1/-1;background:var(--surface-2);border-radius:var(--r);padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.tipcard svg{color:var(--green);flex:0 0 auto;margin-top:2px}
+.tipcard p{margin:2px 0 0;font-size:14.5px}
+.tip-k{font:700 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
+
+/* Cupons */
+.cups{display:grid;gap:10px;grid-auto-flow:column;grid-auto-columns:minmax(250px,78%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:thin}
+.cups .cup{scroll-snap-align:start}
+@media(min-width:760px){.cups{grid-auto-columns:minmax(260px,31%)}}
+#cupons{grid-template-columns:minmax(0,1fr)}
+#cupons>*{min-width:0}
+.relh{margin-top:22px}
+.rel{display:grid;gap:10px;grid-auto-flow:column;grid-auto-columns:minmax(170px,46%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.rel .card{scroll-snap-align:start}
+@media(min-width:760px){.rel{grid-auto-columns:minmax(190px,23%)}}
+.cup-min{margin:0;font:600 12.5px var(--f-mono);color:var(--ink)}
+.cup-hot{font:700 10.5px var(--f-mono);color:var(--red);text-transform:uppercase;letter-spacing:.04em}
+.cup{background:var(--surface);border:1.5px dashed var(--green);border-radius:var(--r);padding:14px;display:grid;gap:9px;align-content:start}
+.cup-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.cup-store{font:700 10.5px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;padding:3px 7px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
+.cup-seen{font:600 11px var(--f-mono);color:var(--muted)}
+.cup-off{font-family:var(--f-display);font-weight:900;font-stretch:108%;font-size:28px;color:var(--green);line-height:1}
+.cup-rule{margin:0;color:var(--muted);font-size:13.5px}
+.cup-codes{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center}
+.code{font:700 14.5px var(--f-mono);letter-spacing:.05em;border:1.5px dashed var(--ink);border-radius:8px;padding:6px 10px}
+
+/* Botão flutuante do canal */
+.fab{position:fixed;right:calc(8px + env(safe-area-inset-right,0px));bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:45;width:44px;height:44px;opacity:.92;border-radius:50%;border:0;background:var(--green);color:var(--green-ink);display:grid;place-items:center;cursor:pointer;animation:fabpulse 2.4s ease-out infinite}
+@keyframes fabpulse{0%{box-shadow:0 0 0 0 rgba(34,212,123,.55)}70%{box-shadow:0 0 0 14px rgba(34,212,123,0)}100%{box-shadow:0 0 0 0 rgba(34,212,123,0)}}
+.fab-dot{position:absolute;top:3px;right:3px;width:14px;height:14px;border-radius:50%;background:var(--red);border:2px solid var(--bg)}
+.fab.on .fab-dot{display:none}
+.pop{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:46;width:min(320px,calc(100% - 32px));background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.45);overflow:hidden}
+.pop-bar{display:flex;justify-content:space-between;align-items:center;padding:6px 6px 6px 12px;font:600 10.5px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
+.pop-x{width:36px;height:36px;border:0;border-radius:10px;background:var(--surface-2);color:var(--ink);cursor:pointer;font-size:15px}
+.pop-art{display:block;width:100%;height:auto}
+.pop-body{padding:12px 14px 16px;display:grid;gap:8px}
+.pop-body h3{margin:0;font-family:var(--f-display);font-weight:900;font-size:20px;line-height:1.1}
+.pop-body p{margin:0;color:var(--muted);font-size:14px}
+
+/* Texto reluzente da contagem */
+.shine{background:linear-gradient(100deg,var(--green) 0%,var(--green) 38%,var(--shine) 50%,var(--green) 62%,var(--green) 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 2.4s linear infinite}
+@keyframes shine{from{background-position:110% 0}to{background-position:-110% 0}}
+.next b.shine{font-weight:800}
+
+/* Balão do botão do canal */
+.fab-tip{pointer-events:none;position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(62px + env(safe-area-inset-bottom,0px));z-index:45;max-width:min(200px,calc(100% - 32px));font-size:12px!important;background:var(--ink);color:var(--bg);font:700 13px var(--f-body);line-height:1.3;padding:9px 12px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.35);animation:tipin .35s ease-out}
+.fab-tip::after{content:"";position:absolute;right:14px;bottom:-6px;border:7px solid transparent;border-top-color:var(--ink);border-bottom:0}
+@keyframes tipin{from{transform:translateX(10px);opacity:0}to{transform:none;opacity:1}}
+.grip{display:inline-flex;align-items:center;gap:6px;color:var(--green)}
+
+</style>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#topo" aria-label="Desmonta Ofertas, voltar ao início">
+      <svg class="gear" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M14 2h4l.7 3.4c1 .3 2 .7 2.9 1.2l2.9-1.9 2.8 2.8-1.9 2.9c.5.9.9 1.9 1.2 2.9L30 14v4l-3.4.7c-.3 1-.7 2-1.2 2.9l1.9 2.9-2.8 2.8-2.9-1.9c-.9.5-1.9.9-2.9 1.2L18 30h-4l-.7-3.4c-1-.3-2-.7-2.9-1.2l-2.9 1.9-2.8-2.8 1.9-2.9c-.5-.9-.9-1.9-1.2-2.9L2 18v-4l3.4-.7c.3-1 .7-2 1.2-2.9L4.7 7.5l2.8-2.8 2.9 1.9c.9-.5 1.9-.9 2.9-1.2zM16 11a5 5 0 1 0 0 10a5 5 0 1 0 0-10z"/></svg>
+      <span class="brand-name">DESMONTA <b>OFERTAS</b></span>
+    </a>
+    <div class="acts">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Trocar entre tema claro e escuro"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button>
+      <a class="icon-btn" href="#alerta" aria-label="Criar alerta de oferta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></a>
+    </div>
+  </div>
+  <div class="wrap tabs" role="tablist" aria-label="Tipos de oferta">
+    <button class="tab" role="tab" data-tab="alta" aria-selected="true"><svg class="ic-fire" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="fo" fill="var(--fire)" d="M12.6 1.5c.6 3.5-1.1 5.6-2.8 7.4C8.1 10.7 6 12.7 6 15.7A6 6 0 0 0 12 22a6 6 0 0 0 6-6.2c0-2.2-1-4-2-5.3-.3 1.4-1.2 2.6-2.3 3.2.8-4.3-.2-9-1.1-12.2z"/><path class="fi" fill="var(--fire-core)" d="M12 22a3.2 3.2 0 0 0 3.2-3.3c0-1.5-.9-2.6-1.7-3.5-.2.9-.8 1.6-1.5 2 .2-1.6-.3-3.2-1.2-4.4-.2 1.7-1.2 2.7-1.9 3.6-.6.8-1.1 1.5-1.1 2.6A3.2 3.2 0 0 0 12 22z"/></svg>Em alta</button>
+    <button class="tab" role="tab" data-tab="recentes" aria-selected="false"><svg class="ic-clock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line class="hm" x1="12" y1="12" x2="12" y2="6.2"/><line class="hh" x1="12" y1="12" x2="15.4" y2="13.6"/></svg>Recentes</button>
+    <button class="tab" role="tab" data-tab="cair" aria-selected="false"><svg class="ic-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="mv"><path d="M3 7l7 7 4-4 7 7"/><path d="M21 11v6h-6"/></g></svg>Preço prestes a cair</button>
+  </div>
+</header>
+
+<main class="wrap" id="topo">
+  <section class="hero">
+    <p class="livebar"><span class="onair"><span class="rdot" aria-hidden="true"></span>Ao vivo</span><span class="next"><span id="nextLbl" class="shine">Atualizando ofertas em</span> <b id="nextT" class="shine">1:00</b></span></p>
+    <h1 aria-label="A gente desmonta o preço antes de você comprar."><span aria-hidden="true">A gente <span class="dm"><span class="lt" style="--s:-.15em;--x:-.04em;--y:-.2em;--r:-12deg;--x2:.03em;--y2:.17em;--r2:10deg;--d:0s"><span class="t">d</span><span class="b">d</span></span><span class="lt" style="--s:-.1em;--x:.03em;--y:-.24em;--r:9deg;--x2:-.02em;--y2:.13em;--r2:-8deg;--d:.06s"><span class="t">e</span><span class="b">e</span></span><span class="lt" style="--s:-.06em;--x:-.03em;--y:-.15em;--r:-6deg;--x2:.04em;--y2:.21em;--r2:12deg;--d:.12s"><span class="t">s</span><span class="b">s</span></span><span class="lt" style="--s:-.02em;--x:.02em;--y:-.21em;--r:5deg;--x2:-.03em;--y2:.15em;--r2:-9deg;--d:.18s"><span class="t">m</span><span class="b">m</span></span><span class="lt" style="--s:.02em;--x:-.02em;--y:-.17em;--r:-10deg;--x2:.02em;--y2:.19em;--r2:7deg;--d:.24s"><span class="t">o</span><span class="b">o</span></span><span class="lt" style="--s:.06em;--x:.04em;--y:-.22em;--r:8deg;--x2:-.04em;--y2:.14em;--r2:-6deg;--d:.3s"><span class="t">n</span><span class="b">n</span></span><span class="lt" style="--s:.1em;--x:-.03em;--y:-.16em;--r:-7deg;--x2:.03em;--y2:.2em;--r2:11deg;--d:.36s"><span class="t">t</span><span class="b">t</span></span><span class="lt" style="--s:.15em;--x:.03em;--y:-.23em;--r:11deg;--x2:-.02em;--y2:.16em;--r2:-10deg;--d:.42s"><span class="t">a</span><span class="b">a</span></span></span> o preço antes de você comprar.</span></h1>
+    <p class="lede">Mais de <span class="nTot">2.000</span> ofertas da Shopee, do Mercado Livre e da Amazon, selecionadas a dedo: preço, loja, frete e parcelamento conferidos. Se não valesse o seu dinheiro, nem aparecia aqui.</p>
+    <div class="bf" role="timer" aria-label="Contagem para a Black Friday">
+      <div class="bf-top"><p class="bf-title"><span class="k">BLACK</span> <span class="r">FRIDAY</span></p><span class="bf-date">27 de novembro</span></div>
+      <div class="clock" id="clock">
+        <div class="u"><b id="cdD">15</b><small>dias</small></div>
+        <div class="u"><b id="cdH">01</b><small>horas</small></div>
+        <div class="u"><b id="cdM">50</b><small>min</small></div>
+        <div class="u s"><b id="cdS">00</b><small>seg</small></div>
+      </div>
+      <p class="bf-note" id="bfNote">Tá chegando a hora! Os melhores produtos com os menores preços vão estar aqui.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="cupons" aria-labelledby="h-cupons">
+    <div class="sec-head"><h2 id="h-cupons">🎟️ Cupons do dia</h2><p class="count" id="cupCount"></p></div>
+    <div id="cupList"></div>
+    <div class="sec-head relh"><h2 id="h-rel">⚡ Ofertas relâmpago</h2><p class="count" id="relCount"></p></div>
+    <p class="sub">Desconto por tempo limitado: quando acaba o estoque da oferta, o preço volta.</p>
+    <div class="rel" id="relList"></div>
+    <div class="sec-head pedh"><h2 id="h-ped">🙋 Vocês pediram, a gente achou</h2><p class="count" id="pedCount"></p></div>
+    <p class="sub pedh">Pediu no "Conta pra gente"? A gente garimpa o mesmo produto no menor preço, com o melhor cupom, e coloca aqui.</p>
+    <div class="rel pedh" id="pedList"></div>
+  </section>
+
+  <div class="find">
+    <div class="search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <label for="q" class="sr">Buscar ofertas</label>
+      <input id="q" type="search" placeholder="Busca qualquer coisa: air fryer, tv, creatina..." autocomplete="off" enterkeyhint="search">
+      <button class="clear" id="clearQ" type="button" aria-label="Limpar busca" hidden>✕</button>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Categorias"></div>
+  </div>
+
+  <section class="sec" id="feed" aria-labelledby="feedTitle">
+    <div class="sec-head"><h2 id="feedTitle">Em alta</h2><p class="count" id="feedCount"></p></div>
+    <p class="sub" id="feedSub"></p>
+    <div class="cards" id="cards"></div>
+    <button class="btn ghost more" id="moreBtn" type="button" hidden>Ver mais ofertas</button>
+    <div id="outside"></div>
+  </section>
+
+
+  <section class="sec" id="duvidas" aria-labelledby="h-duvidas">
+    <div class="sec-head"><h2 id="h-duvidas">Tira-dúvidas antes de comprar</h2></div>
+    <p class="sub">Contas rápidas pra você não comprar errado nem pagar mais do que precisa.</p>
+    <div class="tool-tabs" id="toolTabs" role="tablist" aria-label="Ferramentas">
+      <button class="chip" type="button" data-tool="btu" aria-pressed="true">Ar-condicionado</button>
+      <button class="chip" type="button" data-tool="pb" aria-pressed="false">Power bank</button>
+      <button class="chip" type="button" data-tool="un" aria-pressed="false">Preço por unidade</button>
+      <button class="chip" type="button" data-tool="pc" aria-pressed="false">Fonte x placa de vídeo</button>
+      <button class="chip" type="button" data-tool="cabe" aria-pressed="false">Cabe na sua casa?</button>
+      <button class="chip" type="button" data-tool="vista" aria-pressed="false">À vista ou parcelado?</button>
+      <button class="chip" type="button" data-tool="tv" aria-pressed="false">Tamanho da TV</button>
+      <button class="chip" type="button" data-tool="cap" aria-pressed="false">Capacidade certa</button>
+    </div>
+
+    <div class="panel" id="tool-btu">
+      <p><b>Quantos BTU seu cômodo precisa?</b></p>
+      <div class="fields">
+        <div class="field"><label for="bLarg">Largura (m)</label><input id="bLarg" inputmode="decimal" value="3"></div>
+        <div class="field"><label for="bComp">Comprimento (m)</label><input id="bComp" inputmode="decimal" value="4"></div>
+        <div class="field"><label for="bPes">Pessoas no cômodo</label><input id="bPes" inputmode="numeric" value="2"></div>
+        <div class="field"><label for="bEle">Aparelhos ligados (TV, PC)</label><input id="bEle" inputmode="numeric" value="1"></div>
+      </div>
+      <label class="check"><input type="checkbox" id="bSol"> Bate sol da tarde nesse cômodo</label>
+      <div class="res" id="bRes"></div>
+      <p class="tip">Conta usada: 600 BTU por m² (800 com sol da tarde), mais 600 por pessoa a partir da segunda e 600 por aparelho ligado.</p>
+    </div>
+
+    <div class="panel" id="tool-pb" hidden>
+      <p><b>Quantas cargas o power bank faz?</b></p>
+      <div class="fields">
+        <div class="field"><label for="pCap">Power bank (mAh)</label><input id="pCap" inputmode="numeric" value="20000"></div>
+        <div class="field"><label for="pCel">Bateria do celular (mAh)</label><input id="pCel" inputmode="numeric" value="5000"></div>
+      </div>
+      <div class="res" id="pRes"></div>
+      <p class="tip">Parte da energia se perde na conversão, por isso a conta usa 65% da capacidade da etiqueta. A bateria do seu celular aparece na ficha técnica dele.</p>
+    </div>
+
+    <div class="panel" id="tool-un" hidden>
+      <p><b>Qual sai mais barato de verdade?</b></p>
+      <div class="fields">
+        <div class="field"><label for="uP1">Oferta A: preço (R$)</label><input id="uP1" inputmode="decimal" value="56,90"></div>
+        <div class="field"><label for="uQ1">Oferta A: quantidade</label><input id="uQ1" inputmode="decimal" value="500"></div>
+        <div class="field"><label for="uP2">Oferta B: preço (R$)</label><input id="uP2" inputmode="decimal" value="69,99"></div>
+        <div class="field"><label for="uQ2">Oferta B: quantidade</label><input id="uQ2" inputmode="decimal" value="1000"></div>
+        <div class="field"><label for="uU">Unidade</label><select id="uU"><option value="g">gramas (g)</option><option value="ml">mililitros (ml)</option><option value="un">unidades</option><option value="m">metros</option></select></div>
+      </div>
+      <div class="res" id="uRes"></div>
+    </div>
+
+    <div class="panel" id="tool-pc" hidden>
+      <p><b>Sua fonte aguenta a placa de vídeo?</b></p>
+      <div class="fields">
+        <div class="field"><label for="cGpu">Placa de vídeo</label><select id="cGpu"></select></div>
+        <div class="field"><label for="cW">Sua fonte (W)</label><input id="cW" inputmode="numeric" value="400"></div>
+      </div>
+      <label class="check"><input type="checkbox" id="cGen"> Minha fonte é genérica, sem selo 80 Plus</label>
+      <div class="res" id="cRes"></div>
+      <p class="tip">Valores de fonte recomendados pelos fabricantes das placas, para o PC inteiro. Fonte genérica costuma entregar uns 70% do que diz a etiqueta.</p>
+    </div>
+
+    <div class="panel" id="tool-cabe" hidden>
+      <p><b>O móvel passa na porta e cabe no quarto?</b></p>
+      <div class="fields">
+        <div class="field"><label for="mL">Móvel: largura (cm)</label><input id="mL" inputmode="numeric" value="180"></div>
+        <div class="field"><label for="mA">Móvel: altura (cm)</label><input id="mA" inputmode="numeric" value="200"></div>
+        <div class="field"><label for="mP">Móvel: profundidade (cm)</label><input id="mP" inputmode="numeric" value="50"></div>
+        <div class="field"><label for="dL">Porta: vão livre (cm)</label><input id="dL" inputmode="numeric" value="72"></div>
+        <div class="field"><label for="dA">Porta: altura (cm)</label><input id="dA" inputmode="numeric" value="210"></div>
+        <div class="field"><label for="wP">Parede onde vai ficar (cm)</label><input id="wP" inputmode="numeric" value="250"></div>
+      </div>
+      <label class="check"><input type="checkbox" id="mMont" checked> Vem montado (geladeira, sofá, guarda-roupa pronto)</label>
+      <div class="res" id="mRes"></div>
+      <p class="tip">Mede o vão livre com a porta toda aberta, de batente a batente. A folha da porta aberta come uns 4 cm. Deixa pelo menos 60 cm livres na frente do móvel pra abrir porta e passar.</p>
+      <table class="ref" aria-label="Medidas padrão de colchão">
+        <tr><td>Solteiro</td><td>88 × 188 cm</td></tr>
+        <tr><td>Casal</td><td>138 × 188 cm</td></tr>
+        <tr><td>Queen</td><td>158 × 198 cm</td></tr>
+        <tr><td>King</td><td>193 × 203 cm</td></tr>
+      </table>
+    </div>
+
+    <div class="panel" id="tool-vista" hidden>
+      <p><b>Pagar no Pix ou parcelar sem juros?</b></p>
+      <div class="fields">
+        <div class="field"><label for="vPix">Preço no Pix (R$)</label><input id="vPix" inputmode="decimal" value="1.899"></div>
+        <div class="field"><label for="vParc">Preço parcelado, total (R$)</label><input id="vParc" inputmode="decimal" value="1.999"></div>
+        <div class="field"><label for="vN">Parcelas</label><input id="vN" inputmode="numeric" value="10"></div>
+        <div class="field"><label for="vR">Rendimento ao mês (%)</label><input id="vR" inputmode="decimal" value="0,8"></div>
+      </div>
+      <div class="res" id="vRes"></div>
+      <p class="tip">Com a Selic em 13,75% ao ano, uma conta que rende 100% do CDI paga perto de 0,8% ao mês, já descontado o imposto. A conta considera o dinheiro rendendo enquanto você paga as parcelas.</p>
+    </div>
+
+    <div class="panel" id="tool-tv" hidden>
+      <p><b>Que tamanho de TV fica bom na sua sala?</b></p>
+      <div class="fields"><div class="field"><label for="tvD">Distância do sofá até a TV (m)</label><input id="tvD" inputmode="decimal" value="2,5"></div></div>
+      <div class="res" id="tvRes"></div>
+      <p class="tip">Regra usada: em TV 4K, a distância boa fica entre 1 e 1,5 vez o tamanho da tela. Em TV Full HD, entre 1,5 e 2,5 vezes.</p>
+    </div>
+
+    <div class="panel" id="tool-cap" hidden>
+      <p><b>Qual tamanho comprar pra sua casa?</b></p>
+      <div class="fields">
+        <div class="field"><label for="kT">Produto</label><select id="kT"><option value="geladeira">Geladeira</option><option value="airfryer">Air fryer</option><option value="lavar">Máquina de lavar</option></select></div>
+        <div class="field"><label for="kP">Pessoas em casa</label><input id="kP" inputmode="numeric" value="3"></div>
+      </div>
+      <div class="res" id="kRes"></div>
+      <p class="tip">Referência de mercado pro uso do dia a dia. Quem cozinha muito ou faz compra do mês grande pode subir um tamanho.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="alerta" aria-labelledby="h-alerta">
+    <div class="sec-head"><h2 id="h-alerta">Alerta de oferta</h2></div>
+    <form class="panel" id="alertForm" novalidate>
+      <p>Fala o que você quer e até quanto pode pagar. Quando aparecer nesse preço, a gente te avisa.</p>
+      <div class="fields">
+        <div class="field"><label for="aProd">Produto</label><input id="aProd" autocomplete="off" placeholder="Ex.: Air fryer 12 litros"></div>
+        <div class="field"><label for="aPreco">Até quanto (R$)</label><input id="aPreco" inputmode="numeric" autocomplete="off" placeholder="Ex.: 350"></div>
+      </div>
+      <div class="field"><span class="lbl">Avisar por</span>
+        <div class="seg" id="aCanal">
+          <button class="chip" type="button" data-canal="WhatsApp" aria-pressed="true">WhatsApp</button>
+          <button class="chip" type="button" data-canal="E-mail" aria-pressed="false">E-mail</button>
+          <button class="chip" type="button" data-canal="SMS" aria-pressed="false">SMS</button>
+        </div>
+      </div>
+      <div class="field"><label for="aCont" id="aContLbl">Seu WhatsApp</label><input id="aCont" autocomplete="off" inputmode="tel" placeholder="(27) 99999-9999"></div>
+      <p class="err" id="aErr" hidden>Escreve o nome do produto pra gente saber o que vigiar.</p>
+      <button class="btn" type="submit">Criar alerta no WhatsApp</button>
+      <div class="result" id="aRes" hidden>
+        <p class="count">Seu pedido de alerta</p>
+        <p id="aMsg"></p>
+        <div class="row"><button type="button" class="btn ghost sm" id="aCopy">Copiar pedido</button><a class="btn sm" id="aSend" href="#alerta" target="_blank" rel="noopener" hidden>Mandar no WhatsApp</a></div>
+        <p class="tip" id="aHint"></p>
+      </div>
+    </form>
+  </section>
+
+  <section class="sec" id="ajuda" aria-labelledby="h-ajuda">
+    <div class="sec-head"><h2 id="h-ajuda">Dúvidas frequentes</h2></div>
+    <div class="faq">
+      <details><summary>Como funciona o Desmonta Ofertas?</summary><p>A gente garimpa as ofertas da Shopee, do Mercado Livre e da Amazon e confere preço, loja e frete. Você clica, compra direto na loja e tem a mesma garantia de sempre.</p></details>
+      <details><summary>Comprar por aqui é seguro?</summary><p>É. O pagamento acontece dentro da própria loja (Shopee, Mercado Livre ou Amazon). A gente nunca pede seus dados de pagamento.</p></details>
+      <details><summary>O preço que aparece é o final?</summary><p>Oferta boa muda rápido. Se gostou, coloca no carrinho: assim você acompanha o preço e não perde a oferta.</p></details>
+      <details><summary>Por que vocês não cobram nada?</summary><p>Alguns links são de afiliado. Você paga o mesmo preço, e a loja manda uma comissão pequena pra gente. É isso que mantém o site no ar.</p></details>
+      <details><summary>Não achei o que eu queria. E agora?</summary><p>Busca no topo: são mais de <span class="nTot">2.000</span> ofertas. Se ainda não tiver, cria um alerta ou manda no "Conta pra gente" que a gente garimpa e coloca aqui.</p></details>
+    </div>
+  </section>
+
+  <section class="sec" id="fale" aria-labelledby="h-fale">
+    <div class="sec-head"><h2 id="h-fale">Conta pra gente</h2></div>
+    <form class="panel" id="fbForm" novalidate>
+      <p>Faltou algum produto? Manda o nome ou o link: a gente acha o mesmo produto no menor preço, com o melhor cupom, e coloca no site. O que você achou e o que deu errado também: a gente lê tudo.</p>
+      <div class="seg" id="fbTipo">
+        <button class="chip" type="button" data-tipo="Faltou produto" aria-pressed="true">Faltou produto</button>
+        <button class="chip" type="button" data-tipo="Deu erro" aria-pressed="false">Deu erro</button>
+        <button class="chip" type="button" data-tipo="Sugestão" aria-pressed="false">Sugestão</button>
+        <button class="chip" type="button" data-tipo="Elogio" aria-pressed="false">Elogio</button>
+      </div>
+      <div class="field"><label for="fbTxt">Sua mensagem</label><textarea id="fbTxt" placeholder="Cola o link do produto ou escreve o nome. Ex.: geladeira frost free 375 litros"></textarea></div>
+      <div class="field"><label for="fbCont">WhatsApp ou e-mail (se quiser resposta)</label><input id="fbCont" autocomplete="off"></div>
+      <p class="err" id="fbErr" hidden>Escreve sua mensagem antes de enviar.</p>
+      <button class="btn" type="submit">Mandar pro Neto no WhatsApp</button>
+      <div class="result" id="fbRes" hidden>
+        <p id="fbMsg"></p>
+        <div class="row"><button type="button" class="btn ghost sm" id="fbCopy">Copiar mensagem</button><a class="btn sm" id="fbSend" href="#fale" target="_blank" rel="noopener" hidden>Mandar no WhatsApp</a></div>
+        <p class="tip" id="fbHint"></p>
+      </div>
+    </form>
+  </section>
+
+  <section class="sec" id="regras" aria-labelledby="h-regras">
+    <div class="sec-head"><h2 id="h-regras">Como uma oferta entra aqui</h2></div>
+    <ul class="rules" id="rules"></ul>
+    <p class="disclosure">Alguns links são de afiliado. Você paga o mesmo preço, e o Desmonta recebe uma pequena comissão que mantém o site no ar. Oferta boa acaba rápido: coloque no carrinho para acompanhar.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p><b>Desmonta Ofertas</b> · por Desmonta Tech</p>
+  <p>Coloque no carrinho para acompanhar as ofertas.</p>
+</footer>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="false" aria-labelledby="sheetT" hidden>
+  <div class="sheet-in">
+    <h3 id="sheetT">Opa, não vai comprar agora?</h3>
+    <p>Deixa no carrinho pra não perder de vista. Preço de oferta muda rápido, e no carrinho você vê na hora se subiu ou baixou.</p>
+    <div class="row"><button class="btn" type="button" id="sheetOk">Beleza, vou deixar no carrinho</button><button class="btn ghost" type="button" id="sheetNo">Continuar vendo ofertas</button></div>
+  </div>
+</div>
+<button class="fab" id="fab" type="button" aria-label="Abrir o canal de ofertas no WhatsApp" aria-controls="pop"><svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M14 2h4l.7 3.4c1 .3 2 .7 2.9 1.2l2.9-1.9 2.8 2.8-1.9 2.9c.5.9.9 1.9 1.2 2.9L30 14v4l-3.4.7c-.3 1-.7 2-1.2 2.9l1.9 2.9-2.8 2.8-2.9-1.9c-.9.5-1.9.9-2.9 1.2L18 30h-4l-.7-3.4c-1-.3-2-.7-2.9-1.2l-2.9 1.9-2.8-2.8 1.9-2.9c-.5-.9-.9-1.9-1.2-2.9L2 18v-4l3.4-.7c.3-1 .7-2 1.2-2.9L4.7 7.5l2.8-2.8 2.9 1.9c.9-.5 1.9-.9 2.9-1.2zM16 10.5a5.5 5.5 0 1 0 0 11a5.5 5.5 0 1 0 0-11z"/><text x="16" y="19.6" text-anchor="middle" font-size="9.5" font-weight="900" fill="currentColor" font-family="Arial,sans-serif">%</text></svg><span class="fab-dot" aria-hidden="true"></span></button>
+<div class="fab-tip" id="fabTip" role="status" hidden></div>
+<div class="pop" id="pop" role="dialog" aria-labelledby="popT" hidden>
+  <div class="pop-bar" id="popBar"><span class="grip"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="8" cy="5" r="2"/><circle cx="16" cy="5" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="8" cy="19" r="2"/><circle cx="16" cy="19" r="2"/></svg>Arrasta pra mover</span><button class="pop-x" id="popX" type="button" aria-label="Fechar">✕</button></div>
+  <svg class="pop-art" viewBox="0 0 320 140" role="img" aria-label="Desmonta Ofertas ao vivo">
+    <rect width="320" height="140" fill="var(--art-bg)"/>
+    <g transform="translate(22 26) scale(2.75)"><path fill="var(--art-green)" fill-rule="evenodd" d="M14 2h4l.7 3.4c1 .3 2 .7 2.9 1.2l2.9-1.9 2.8 2.8-1.9 2.9c.5.9.9 1.9 1.2 2.9L30 14v4l-3.4.7c-.3 1-.7 2-1.2 2.9l1.9 2.9-2.8 2.8-2.9-1.9c-.9.5-1.9.9-2.9 1.2L18 30h-4l-.7-3.4c-1-.3-2-.7-2.9-1.2l-2.9 1.9-2.8-2.8 1.9-2.9c-.5-.9-.9-1.9-1.2-2.9L2 18v-4l3.4-.7c.3-1 .7-2 1.2-2.9L4.7 7.5l2.8-2.8 2.9 1.9c.9-.5 1.9-.9 2.9-1.2zM16 9.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><text x="16" y="19.4" text-anchor="middle" font-size="8.5" font-weight="900" fill="var(--art-ink)" font-family="Arial,sans-serif">%</text></g>
+    <text x="126" y="62" fill="var(--art-ink)" font-size="27" font-weight="900" textLength="172" lengthAdjust="spacingAndGlyphs" style="font-family:var(--f-display)">DESMONTA</text>
+    <text x="126" y="92" fill="var(--art-green)" font-size="27" font-weight="900" textLength="150" lengthAdjust="spacingAndGlyphs" style="font-family:var(--f-display)">OFERTAS</text>
+    <rect x="126" y="104" width="80" height="20" rx="5" fill="var(--art-red)"/>
+    <circle class="rdot" cx="137" cy="114" r="3.5" fill="var(--art-ink)"/>
+    <text x="146" y="118.5" fill="var(--art-ink)" font-size="11" font-weight="700" textLength="52" lengthAdjust="spacingAndGlyphs" style="font-family:var(--f-mono)">AO VIVO</text>
+  </svg>
+  <div class="pop-body">
+    <h3 id="popT">Cupom e as melhores ofertas direto no seu WhatsApp</h3>
+    <p>Entra no nosso canal e já ativa o sininho 🔔</p>
+    <p>Tá saindo um cupom melhor que o outro, e passarinho que acorda cedo bebe água limpa 😉</p>
+    <a class="btn" id="popGo" href="#topo" target="_blank" rel="noopener">Entrar no canal</a>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+const DATA = __DATA__;
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const brl = n => { const w = Math.abs(n - Math.round(n)) < 0.005; return n.toLocaleString("pt-BR", {style:"currency", currency:"BRL", minimumFractionDigits: w ? 0 : 2, maximumFractionDigits: w ? 0 : 2}); };
+const num = v => { const n = parseFloat(String(v).replace(/\./g, "").replace(",", ".")); return isNaN(n) ? 0 : n; };
+const numDec = v => { const s = String(v).trim(); const n = parseFloat(s.includes(",") ? s.replace(/\./g, "").replace(",", ".") : s); return isNaN(n) ? 0 : n; };
+const reduceMotion = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+const CATS = Object.fromEntries(DATA.cats);
+const ICON_BOX = '<svg class="ico" width="44" height="44" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l12-6 12 6v12l-12 6-12-6z"/><path d="M4 10l12 6 12-6M16 16v12"/></svg>';
+const ICON_GPU = '<svg class="ico" width="48" height="48" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="8" width="26" height="14" rx="2"/><circle cx="11" cy="15" r="4"/><circle cx="21" cy="15" r="4"/><path d="M6 22v3M10 22v3M14 22v3M18 22v3"/></svg>';
+const ICON_PSU = '<svg class="ico" width="48" height="48" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="6" width="24" height="20" rx="2"/><circle cx="14" cy="16" r="6"/><path d="M14 10v12M8 16h12M24 10v3"/></svg>';
+const SHARE = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v12M7 8l5-5 5 5"/></svg>';
+const CHECK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>';
+const STORE = {sp:"Shopee", ml:"Mercado Livre", az:"Amazon"};
+const FLAGS = {F:"Frete grátis", L:"Full", M:"Mais vendido", D:"Oferta do dia", R:"Relâmpago", S:"Sem juros", P:"Vocês pediram"};
+const HELP = {btu:"Quantos BTU eu preciso?", pb:"Quantas cargas faz?", pc:"Minha fonte aguenta?", cabe:"Cabe na minha casa?", tv:"Que tamanho eu preciso?", cap:"Qual capacidade pra minha casa?", vista:"Parcelar ou pagar no Pix?"};
+const TABS = {
+  alta: {t:"Em alta", s:"Os mais vendidos e as ofertas do dia agora, com os maiores descontos primeiro."},
+  recentes: {t:"Recentes", s:"As ofertas mais novas primeiro."},
+  cair: {t:"Preço prestes a cair", s:"Ainda sem desconto forte. Na Black Friday esses costumam baixar: cria o alerta que a gente avisa."}
+};
+const RULES = [
+  ["Preço conferido", "Comparo com outras lojas e com o menor preço recente. Desconto inflado fica de fora."],
+  ["Loja confiável", "Loja oficial ou vendedor com reputação alta. Anúncio sem venda não entra."],
+  ["Sem pegadinha", "Importado com imposto escondido e eletrônico sem marca não passam."],
+  ["Veredito sincero", "Se não vale o dinheiro, a gente fala. Às vezes a resposta é esperar."]
+];
+const GPUS = [["RTX 3050 6 GB",300,"Não precisa de cabo extra"],["RTX 3060 12 GB",550,"Cabo de 8 pinos"],["RTX 4060",550,"Cabo de 8 pinos"],["RTX 5050",550,"Cabo de 8 pinos"],["RTX 5060",550,"Cabo de 8 pinos"],["RTX 5060 Ti",600,"Cabo de 8 pinos"],["RTX 5070",650,"Cabo 12V-2x6 ou adaptador"],["RX 580 8 GB",500,"Cabo de 8 pinos"],["RX 6600",450,"Cabo de 8 pinos"],["RX 7600",550,"Cabo de 8 pinos"]];
+
+const state = {tab:"alta", cat:"todas", q:"", shown:24};
+const NATAL = /natal|natalin|papai noel|pisca|pres[eé]pio|guirlanda|panet+one|chocottone|amigo secreto|fest[aã]o/i;
+const GAME = /\b(ps5|ps4|playstation|xbox|nintendo|gamer|gta|dualsense|dualshock|joystick|console|gamepad|headset)\b/i;
+const TREND = [
+  ["t:natal", "🎄 Natal", it => it.c === "natal" || NATAL.test(it.t)],
+  ["t:games", "🎮 GTA 6 e games", it => it.c === "games" || (GAME.test(it.t) && ["informatica","audio","tv","celulares"].includes(it.c))],
+  ["t:presente", "🎁 Presente até R$ 100", it => it.p > 0 && it.p <= 100 && ["brinquedos","beleza","moda","audio","celulares","games","esporte"].includes(it.c2 || it.c)],
+  ["t:bf", "🔥 Imperdíveis", it => strength(it)[0] === 4],
+  ["t:amazon", "🏆 Top Amazon", it => it.s === "az"]
+];
+const TREND_FN = Object.fromEntries(TREND.map(t => [t[0], t[2]]));
+function strength(it) {
+  let s = it.off || 0;
+  const f = it.f || "", sold = it.sold || "";
+  if (f.includes("M")) s += 8;
+  if (f.includes("D") || f.includes("R")) s += 6;
+  if (f.includes("F") || f.includes("L")) s += 3;
+  if (/mi\+|\d{3}mil/.test(sold)) s += 12; else if (/\d{2}mil/.test(sold)) s += 9; else if (/mil/.test(sold)) s += 5;
+  return s >= 58 ? [4, "Imperdível"] : s >= 32 ? [3, "Muito boa"] : [2, "Boa"];
+}
+
+function matches(it) {
+  const cc = it.c2 || it.c;
+  if (state.cat.startsWith("t:")) { if (!TREND_FN[state.cat](it)) return false; }
+  else if (state.cat !== "todas" && cc !== state.cat) return false;
+  if (!state.q) return true;
+  const hay = norm(it.t + " " + (CATS[cc] || ""));
+  return norm(state.q).split(/\s+/).filter(Boolean).every(w => hay.includes(w));
+}
+
+function listFor(tab) {
+  if (tab === "cair") return DATA.radar.slice();
+  const items = DATA.items.slice();
+  if (tab === "recentes") return items.sort((a, b) => b.n - a.n);
+  const season = state.cat === "todas";
+  const score = it => (it.f.includes("M") ? 3 : 0) + (it.f.includes("D") ? 2 : 0) + (it.f.includes("R") ? 2 : 0) + (it.sold && /mi\+|\d{2,3}mil/.test(it.sold) ? 3 : it.sold && /mil/.test(it.sold) ? 2 : 0) + (it.off || 0) / 20 + (season && TREND_FN["t:natal"](it) ? 2.5 : 0) + (season && TREND_FN["t:games"](it) ? 2 : 0) + (it.s === "az" ? 3.5 : 0) + ((it.n * 7919) % 100) / 100;
+  const sorted = items.sort((a, b) => (b.off || 0) - (a.off || 0) || score(b) - score(a));
+  return sorted;
+}
+function varied(list) {
+  const memo = new Map();
+  const key = it => { if (!memo.has(it)) memo.set(it, norm(it.t).replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter(w => w.length > 2).slice(0, 2).join(" ")); return memo.get(it); };
+  const out = [], wait = [], recent = [];
+  const fits = it => !recent.includes(key(it)) && !(state.cat === "todas" && out.length && out[out.length - 1].c === it.c && out.length > 1 && out[out.length - 2].c === it.c);
+  const take = it => { out.push(it); recent.push(key(it)); if (recent.length > 4) recent.shift(); };
+  for (const it of list) {
+    for (let i = 0; i < wait.length; i++) { if (fits(wait[i])) { take(wait.splice(i, 1)[0]); i = -1; } }
+    if (fits(it)) take(it); else wait.push(it);
+  }
+  return out.concat(wait);
+}
+
+function card(it) {
+  const [lvl, lbl] = strength(it);
+  const bars = lvl ? `<div class="sig" title="Força do desconto"><span class="bars" aria-hidden="true">${[1,2,3,4].map(i => `<i class="${i <= lvl ? "on" : ""}"></i>`).join("")}</span><span>${lbl}</span></div>` : "";
+  const flags = it.f.split("").filter(k => FLAGS[k]).slice(0, 3).map(k => `<span class="flag${k === "S" ? " n" : ""}">${FLAGS[k]}</span>`).join("") + (it.sold ? `<span class="flag n">+${esc(it.sold.replace("+", ""))} vendidos</span>` : "");
+  const az = it.s === "az";
+  const share = "https://wa.me/?text=" + encodeURIComponent(az ? `Olha esse top mais vendido da Amazon: ${it.t} ${it.u}` : `Olha essa oferta: ${it.t} por ${brl(it.p)} ${it.u}`);
+  return `<article class="card">
+    <div class="ph">${photo(it)}<a class="ph-go buy" href="${esc(it.u)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta: ${esc(it.t)}"></a>
+      ${it.off ? `<span class="off">-${it.off}%</span>` : ""}
+      <a class="share" href="${share}" target="_blank" rel="noopener" aria-label="Mandar essa oferta no WhatsApp">${SHARE}</a>
+      <span class="store">${STORE[it.s]}</span>
+    </div>
+    <div class="cb">
+      <h3 class="ttl" title="${esc(it.t)}"><a class="buy" href="${esc(it.u)}" target="_blank" rel="noopener sponsored">${esc(it.t)}</a></h3>
+      ${az ? `<div class="pr"><small>🏆 Top mais vendidos da Amazon</small><strong class="now az">Preço escondido 👀</strong><small>Toca e descobre o preço de hoje</small></div>` : `<div class="pr">${it.o ? `<s>${brl(it.o)}</s>` : ""}${it.from ? "<small>a partir de</small>" : ""}<strong>${brl(it.p)}</strong></div>
+      ${bars}`}
+      ${flags ? `<div class="flags">${flags}</div>` : ""}
+      ${it.un ? `<p class="unit">${esc(it.un)}</p>` : ""}
+      ${it.h && !az ? `<button class="help" type="button" data-help="${it.h}" data-cap="${it.cap || ""}" data-k="${it.k || ""}" data-p="${it.p}">${HELP[it.h]}</button>` : ""}
+      <div class="foot">
+        <a class="btn buy" href="${esc(it.u)}" target="_blank" rel="noopener sponsored">${az ? "Garantir o meu na Amazon 🔥" : "Pegar oferta"}</a>
+        <a class="share-row" href="${share}" target="_blank" rel="noopener">${SHARE}<span>Manda pra quem não pode perder essa</span></a>
+        <p class="warn">Coloque no carrinho para acompanhar a oferta.</p>
+      </div>
+    </div>
+  </article>`;
+}
+
+function photo(it) {
+  if (it.sp == null) return ICON_BOX;
+  const col = it.ix % 12, row = Math.floor(it.ix / 12);
+  return `<span class="img" role="img" aria-label="${esc(it.t)}" style="background-image:url(img/${it.sp}.webp);background-position:${(col / 11 * 100).toFixed(3)}% ${(row / 4 * 100).toFixed(3)}%"></span>`;
+}
+
+function radarCard(r) {
+  return `<article class="card">
+    <div class="ph">${photo(r)}<a class="ph-go buy" href="${esc(r.u)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta: ${esc(r.t)}"></a><span class="store">${STORE[r.s]}</span></div>
+    <div class="cb">
+      <h3 class="ttl" title="${esc(r.t)}"><a class="buy" href="${esc(r.u)}" target="_blank" rel="noopener sponsored">${esc(r.t)}</a></h3>
+      <div class="pr"><small>preço hoje</small><strong class="now">${brl(r.p)}</strong></div>
+      ${r.alvo ? `<div class="target"><small>preço bom até</small><strong>${brl(r.alvo)}</strong></div>` : ""}
+      <p class="verdict">${esc(r.v || "Ainda sem desconto forte. Cria o alerta que a gente avisa quando cair.")}</p>
+      <div class="foot">
+        <button class="btn" type="button" data-alert="${esc(r.t)}" data-alvo="${r.alvo || ""}">Me avisa quando cair</button>
+        <a class="btn ghost sm" href="${esc(r.u)}" target="_blank" rel="noopener sponsored">Ver preço de hoje</a>
+      </div>
+    </div>
+  </article>`;
+}
+
+const TIPS = [
+  "Parcelado sem juros pelo mesmo preço do Pix? Parcela e deixa o dinheiro rendendo numa conta que paga 100% do CDI. Se o Pix tiver desconto, faz a conta em “À vista ou parcelado?” no Tira-dúvidas.",
+  "O que mais pesa no score é pagar as contas em dia. Um atraso de poucos dias já derruba a pontuação.",
+  "Deixa o Cadastro Positivo ativo: ele mostra pros bancos as contas que você paga certinho e ajuda o score.",
+  "Evita pedir vários cartões e empréstimos de uma vez. Muita consulta ao seu CPF em pouco tempo pode baixar o score.",
+  "Nome sujo? Programas de renegociação como o Serasa Limpa Nome costumam dar desconto grande pra quitar dívida antiga.",
+  "Antes de parcelar, soma a parcela nova com as que você já tem. Passou de 30% da sua renda, é sinal de aperto."
+];
+const COIN = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.2c-.5-.9-1.6-1.4-2.8-1.4-1.6 0-2.8.9-2.8 2.1 0 2.8 5.8 1.4 5.8 4.2 0 1.2-1.3 2.1-3 2.1-1.3 0-2.4-.5-2.9-1.4M12 6v1.8M12 16.2V18"/></svg>';
+function tipCard(i) { return `<aside class="tipcard">${COIN}<div><span class="tip-k">Dica de grana</span><p>${esc(TIPS[i % TIPS.length])}</p></div></aside>`; }
+
+function renderRel() {
+  const rel = DATA.items.filter(it => (it.f || "").includes("R") && it.off).sort((a, b) => b.n - a.n).slice(0, 12).sort((a, b) => (b.off || 0) - (a.off || 0));
+  $("relCount").textContent = rel.length ? rel.length + " agora" : "";
+  $("relList").innerHTML = rel.map(card).join("");
+  document.querySelector(".relh").hidden = !rel.length;
+}
+function renderPed() {
+  const ped = DATA.items.filter(it => (it.f || "").includes("P")).sort((a, b) => b.n - a.n).slice(0, 12);
+  $("pedCount").textContent = ped.length ? ped.length + " atendidos" : "";
+  $("pedList").innerHTML = ped.map(card).join("");
+  document.querySelectorAll(".pedh").forEach(e => { e.hidden = !ped.length; });
+}
+function renderCupons() {
+  const now = Date.now();
+  const list = DATA.cupons.filter(c => !c.ate || new Date(c.ate).getTime() > now);
+  $("cupCount").textContent = list.length ? list.length + " ativos" : "conferindo";
+  $("cupList").innerHTML = list.length
+    ? `<div class="cups">${list.map((c, i) => `<article class="cup">
+        <div class="cup-top"><span class="cup-store">${STORE[c.s]}</span><span class="cup-seen">visto ${esc(c.visto)}</span></div>
+        <div class="cup-off">${esc(c.off)}</div>
+        ${c.nome ? `<p class="cup-min">${esc(c.nome)}</p>` : ""}
+        <p class="cup-rule">${esc(c.regra)}</p>
+        ${c.esgotando ? `<span class="cup-hot">🔥 Está esgotando</span>` : ""}
+        <div class="cup-codes">${c.codes.length ? c.codes.map((k, j) => `<span class="code" id="cp${i}_${j}">${esc(k)}</span><button class="btn ghost sm" type="button" data-copy="cp${i}_${j}">Copiar</button>`).join("") : ""}</div>
+        <a class="btn sm" href="${esc(c.u)}" target="_blank" rel="noopener sponsored">${c.s === "sp" ? "Pegar cupom na Shopee" : c.s === "az" ? "Ver ofertas na Amazon" : "Pegar cupom no Mercado Livre"}</a>
+      </article>`).join("")}</div><p class="tip">Cupom tem limite de uso e pode esgotar a qualquer hora. O desconto aparece no carrinho, antes de pagar.</p>`
+    : `<p class="empty"><b>Nenhum cupom ativo agora.</b><span>Cupom novo entra aqui assim que aparece. Entra no canal do WhatsApp pra receber na hora.</span></p>`;
+}
+
+function render() {
+  const conf = TABS[state.tab];
+  $("feedTitle").textContent = conf.t;
+  $("feedSub").textContent = conf.s;
+  const all = listFor(state.tab).filter(matches);
+  const page = all.slice(0, state.shown);
+  $("feedCount").textContent = all.length + (state.tab === "cair" ? " no radar" : all.length === 1 ? " oferta" : " ofertas");
+  if (!all.length) {
+    const what = state.q ? `"${esc(state.q)}"` : esc(CATS[state.cat] || (TREND.find(t => t[0] === state.cat) || [0, "essa categoria"])[1]);
+    $("cards").innerHTML = "";
+    const alt = listFor("alta").filter(it => state.cat === "todas" || state.cat.startsWith("t:") || (it.c2 || it.c) === state.cat).slice(0, 8);
+    $("outside").innerHTML = `<div class="empty"><b>Ainda não tem oferta conferida de ${what}.</b><span>Cria um alerta que a gente garimpa e te avisa quando aparecer num preço bom. Enquanto isso, olha essas que estão bombando:</span><a class="btn sm" href="#alerta" data-alert="${esc(state.q || "")}">Criar alerta</a><div class="cards">${alt.map(card).join("")}</div></div>`;
+  } else {
+    const withTips = state.tab !== "cair" && !state.q;
+    const out = [];
+    page.forEach((it, i) => { out.push(state.tab === "cair" ? radarCard(it) : card(it)); if (withTips && (i + 1) % 12 === 0) out.push(tipCard((i + 1) / 12 - 1)); });
+    $("cards").innerHTML = out.join("");
+    $("outside").innerHTML = "";
+  }
+  $("moreBtn").hidden = all.length <= state.shown;
+  $("clearQ").hidden = !state.q;
+}
+
+function buildChips() {
+  const counts = {};
+  DATA.items.forEach(i => { counts[i.c] = (counts[i.c] || 0) + 1; });
+  const trend = TREND.map(([id, label, fn]) => [id, label, DATA.items.filter(fn).length, " hot"]);
+  const list = [["todas", "Todas", DATA.items.length, ""]].concat(trend, DATA.cats.map(([id, label]) => [id, label, counts[id] || 0, ""]).sort((a, b) => b[2] - a[2]));
+  $("chips").innerHTML = list.map(([id, label, n, k]) => `<button class="chip${k}" type="button" data-cat="${id}" aria-pressed="${id === state.cat}">${esc(label)}<i>${n}</i></button>`).join("");
+
+}
+
+function setCat(id) {
+  state.cat = id; state.shown = 24;
+  document.querySelectorAll("#chips .chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.cat === id)));
+  render();
+}
+
+function setTab(t) {
+  state.tab = t; state.shown = 24;
+  document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === t)));
+  render();
+}
+
+/* Tempo */
+function updText() {
+  if (!$("upd")) return;
+  const mins = Math.max(0, Math.round((Date.now() - new Date(DATA.updated).getTime()) / 60000));
+  let t;
+  if (mins < 1) t = "atualizado agora";
+  else if (mins < 60) t = `atualizado há ${mins} min`;
+  else if (mins < 24 * 60) t = `atualizado há ${Math.round(mins / 60)} h`;
+  else { const d = new Date(DATA.updated); t = `atualizado em ${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}`; }
+  $("upd").textContent = t;
+}
+function tick() {
+  const left = new Date(DATA.bf).getTime() - Date.now();
+  if (left <= 0) {
+    ["cdD","cdH","cdM","cdS"].forEach(id => { $(id).textContent = "00"; });
+    $("bfNote").textContent = "Tá rolando! As ofertas mais quentes da Black Friday estão aqui embaixo.";
+    return;
+  }
+  const s = Math.floor(left / 1000);
+  $("cdD").textContent = Math.floor(s / 86400);
+  $("cdH").textContent = String(Math.floor(s % 86400 / 3600)).padStart(2, "0");
+  $("cdM").textContent = String(Math.floor(s % 3600 / 60)).padStart(2, "0");
+  $("cdS").textContent = String(s % 60).padStart(2, "0");
+}
+
+/* Tema */
+function applyTheme(t) {
+  if (t) document.documentElement.setAttribute("data-theme", t);
+  try { if (t) localStorage.setItem("dm-theme", t); } catch (e) {}
+}
+function currentTheme() {
+  const a = document.documentElement.getAttribute("data-theme");
+  if (a) return a;
+  return window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+}
+
+/* Ferramentas */
+function showTool(id) {
+  document.querySelectorAll("#toolTabs .chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.tool === id)));
+  ["btu","pb","un","pc","cabe","vista","tv","cap"].forEach(k => { $("tool-" + k).hidden = k !== id; });
+}
+const SIZES = [7500, 9000, 12000, 18000, 22000, 24000, 30000, 36000];
+function calcBTU() {
+  const area = numDec($("bLarg").value) * numDec($("bComp").value);
+  const pes = Math.max(1, Math.round(num($("bPes").value)));
+  const ele = Math.max(0, Math.round(num($("bEle").value)));
+  if (!area) { $("bRes").className = "res bad"; $("bRes").innerHTML = "<b>Coloca as medidas do cômodo</b>"; return; }
+  const total = Math.round(area * ($("bSol").checked ? 800 : 600) + (pes - 1) * 600 + ele * 600);
+  const size = SIZES.find(s => s >= total);
+  $("bRes").className = "res";
+  $("bRes").innerHTML = size
+    ? `<b>Aparelho de ${size.toLocaleString("pt-BR")} BTU</b><p>Seu cômodo de ${area.toLocaleString("pt-BR", {maximumFractionDigits: 1})} m² pede uns ${total.toLocaleString("pt-BR")} BTU. Menos que isso, o aparelho trabalha no limite e gasta mais luz.</p><div class="row"><button class="btn sm" type="button" data-find="ar condicionado">Ver ar-condicionado em oferta</button></div>`
+    : `<b>Mais de 36.000 BTU</b><p>Seu cômodo pede uns ${total.toLocaleString("pt-BR")} BTU. Nesse tamanho, compensa dividir em dois aparelhos.</p>`;
+}
+function calcPB() {
+  const cap = num($("pCap").value), cel = num($("pCel").value);
+  if (!cap || !cel) { $("pRes").className = "res bad"; $("pRes").innerHTML = "<b>Preenche as duas capacidades</b>"; return; }
+  const c = Math.floor(cap * 0.65 / cel * 10) / 10;
+  $("pRes").className = "res";
+  $("pRes").innerHTML = `<b>Umas ${c.toLocaleString("pt-BR")} cargas completas</b><p>Um power bank de ${cap.toLocaleString("pt-BR")} mAh entrega na prática uns ${Math.round(cap * 0.65).toLocaleString("pt-BR")} mAh.</p>`;
+}
+function calcUN() {
+  const u = $("uU").value;
+  const base = u === "g" || u === "ml" ? 100 : 1;
+  const name = {g:"100 g", ml:"100 ml", un:"unidade", m:"metro"}[u];
+  const a = num($("uP1").value) / num($("uQ1").value) * base, b = num($("uP2").value) / num($("uQ2").value) * base;
+  if (!isFinite(a) || !isFinite(b) || !a || !b) { $("uRes").className = "res bad"; $("uRes").innerHTML = "<b>Preenche preço e quantidade das duas</b>"; return; }
+  const win = a <= b ? "A" : "B", diff = Math.round(Math.abs(a - b) / Math.max(a, b) * 100);
+  $("uRes").className = "res";
+  $("uRes").innerHTML = `<b>A oferta ${win} sai ${diff}% mais barata</b><p>A: ${brl(a)} por ${name}. B: ${brl(b)} por ${name}.</p>`;
+}
+function calcPC() {
+  const g = GPUS[+$("cGpu").value];
+  let w = num($("cW").value);
+  const real = $("cGen").checked ? Math.round(w * 0.7) : w;
+  if (!w) { $("cRes").className = "res bad"; $("cRes").innerHTML = "<b>Coloca a potência da sua fonte</b>"; return; }
+  if (real >= g[1]) {
+    $("cRes").className = "res";
+    $("cRes").innerHTML = `<b>Aguenta a ${g[0]}</b><p>Fabricante pede ${g[1]} W. ${g[2]}: confere se sua fonte tem esse cabo.</p>`;
+  } else {
+    $("cRes").className = "res bad";
+    $("cRes").innerHTML = `<b>Não aguenta a ${g[0]}</b><p>Fabricante pede ${g[1]} W e sua fonte entrega uns ${real} W. Pega uma fonte de ${Math.ceil(g[1] / 50) * 50} W ou mais com selo 80 Plus.</p><div class="row"><button class="btn sm" type="button" data-find="fonte">Ver fontes em oferta</button></div>`;
+  }
+}
+function calcCabe() {
+  const d = [num($("mL").value), num($("mA").value), num($("mP").value)].sort((x, y) => x - y);
+  const dl = num($("dL").value), da = num($("dA").value), wp = num($("wP").value), ml = num($("mL").value);
+  const msgs = [];
+  let ok = true;
+  if ($("mMont").checked) {
+    if (d[0] <= dl - 2 && d[1] <= da - 2) msgs.push(`Passa na porta: a menor medida (${d[0]} cm) cabe no vão de ${dl} cm.`);
+    else { ok = false; msgs.push(`Não passa na porta. A menor medida do móvel é ${d[0]} cm e o vão livre é ${dl} cm. Precisaria de pelo menos ${d[0] + 2} cm.`); }
+  } else msgs.push("Vem desmontado: passa caixa por caixa. Só confere o espaço no cômodo.");
+  if (wp) {
+    if (ml <= wp) msgs.push(`Cabe na parede: sobram ${wp - ml} cm.`);
+    else { ok = false; msgs.push(`Não cabe na parede: faltam ${ml - wp} cm.`); }
+  }
+  $("mRes").className = ok ? "res" : "res bad";
+  $("mRes").innerHTML = `<b>${ok ? "Cabe" : "Não cabe"}</b>` + msgs.map(m => `<p>${m}</p>`).join("");
+}
+
+/* Alerta e feedback */
+let canal = "WhatsApp", tipo = "Faltou produto";
+function abrirZap(text) { const l = waLink(text); if (l) { try { window.open(l, "_blank", "noopener"); } catch (e) {} } }
+function waLink(text) { return DATA.contato.whatsapp ? `https://wa.me/${DATA.contato.whatsapp}?text=${encodeURIComponent(text)}` : ""; }
+function handoff(msgEl, sendEl, hintEl, text) {
+  msgEl.textContent = text;
+  const link = waLink(text);
+  sendEl.hidden = !link;
+  if (link) sendEl.href = link;
+  hintEl.textContent = link ? "A mensagem já vai pronta pro WhatsApp do Neto. Se não abriu sozinho, toca em Mandar no WhatsApp." : "Copia a mensagem e manda no direct do Desmonta Tech no Instagram. Enquanto isso, entra no canal do WhatsApp pra receber as ofertas.";
+}
+
+/* Utilidades */
+let toastT;
+function toast(m) { const t = $("toast"); t.textContent = m; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, 2300); }
+function copyFrom(el, ok) {
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast("Texto selecionado. Copia pelo menu."); };
+  try { navigator.clipboard.writeText(el.textContent).then(() => toast(ok), fallback); } catch (e) { fallback(); }
+}
+function go(id) { $(id).scrollIntoView({behavior: reduceMotion ? "auto" : "smooth", block: "start"}); }
+
+/* Aviso de saída */
+let sheetShown = false, wentToStore = false;
+try { sheetShown = sessionStorage.getItem("dm-sheet") === "1"; } catch (e) {}
+function showSheet() {
+  if (sheetShown) return;
+  sheetShown = true;
+  try { sessionStorage.setItem("dm-sheet", "1"); } catch (e) {}
+  toast("Deixa no carrinho pra não perder a oferta 😉");
+}
+
+/* Eventos */
+document.addEventListener("click", e => {
+  const cp = e.target.closest("[data-copy]"); if (cp) { copyFrom($(cp.dataset.copy), "Cupom copiado. Cola no carrinho."); return; }
+  const tab = e.target.closest(".tab"); if (tab) { setTab(tab.dataset.tab); return; }
+  const chip = e.target.closest("#chips .chip"); if (chip) { setCat(chip.dataset.cat); return; }
+  const tool = e.target.closest("#toolTabs .chip"); if (tool) { showTool(tool.dataset.tool); return; }
+  const c1 = e.target.closest("#aCanal .chip");
+  if (c1) {
+    canal = c1.dataset.canal;
+    document.querySelectorAll("#aCanal .chip").forEach(c => c.setAttribute("aria-pressed", String(c === c1)));
+    $("aContLbl").textContent = canal === "E-mail" ? "Seu e-mail" : "Seu " + (canal === "SMS" ? "celular" : "WhatsApp");
+    $("aCont").placeholder = canal === "E-mail" ? "voce@email.com" : "(27) 99999-9999";
+    $("aCont").inputMode = canal === "E-mail" ? "email" : "tel";
+    return;
+  }
+  const t1 = e.target.closest("#fbTipo .chip");
+  if (t1) { tipo = t1.dataset.tipo; document.querySelectorAll("#fbTipo .chip").forEach(c => c.setAttribute("aria-pressed", String(c === t1))); return; }
+  const help = e.target.closest("[data-help]");
+  if (help) {
+    const h = help.dataset.help;
+    showTool(h);
+    if (h === "pb" && help.dataset.cap) { $("pCap").value = help.dataset.cap; calcPB(); }
+    if (h === "cap" && help.dataset.k) { $("kT").value = help.dataset.k; calcCap(); }
+    if (h === "vista" && help.dataset.p) { const v = Number(help.dataset.p).toFixed(2).replace(".", ","); $("vPix").value = v; $("vParc").value = v; calcVista(); }
+    go("duvidas");
+    return;
+  }
+  const f = e.target.closest("[data-find]");
+  if (f) { state.q = f.dataset.find; $("q").value = state.q; state.tab = state.tab === "cair" ? "alta" : state.tab; setTab(state.tab); setCat("todas"); go("feed"); return; }
+  const al = e.target.closest("[data-alert]");
+  if (al) { $("aProd").value = al.dataset.alert; $("aPreco").value = al.dataset.alvo || ""; $("aErr").hidden = true; go("alerta"); $("aProd").focus({preventScroll: true}); return; }
+  if (e.target.closest(".buy")) { wentToStore = true; }
+});
+document.addEventListener("error", e => {
+  const img = e.target;
+  if (img && img.tagName === "IMG" && img.parentNode) { img.insertAdjacentHTML("afterend", ICON_BOX); img.remove(); }
+}, true);
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && wentToStore) { wentToStore = false; setTimeout(showSheet, 600); } });
+$("sheetOk").addEventListener("click", () => { $("sheet").hidden = true; toast("Boa! Preço de oferta voa."); });
+$("sheetNo").addEventListener("click", () => { $("sheet").hidden = true; });
+
+$("q").addEventListener("input", e => { state.q = e.target.value; state.shown = 24; if (state.tab === "cair" && state.q) setTab("alta"); else render(); });
+$("clearQ").addEventListener("click", () => { state.q = ""; $("q").value = ""; render(); $("q").focus(); });
+$("moreBtn").addEventListener("click", () => { state.shown += 24; render(); });
+$("themeBtn").addEventListener("click", () => applyTheme(currentTheme() === "dark" ? "light" : "dark"));
+
+["bLarg","bComp","bPes","bEle","bSol"].forEach(id => $(id).addEventListener("input", calcBTU));
+["pCap","pCel"].forEach(id => $(id).addEventListener("input", calcPB));
+["uP1","uQ1","uP2","uQ2","uU"].forEach(id => $(id).addEventListener("input", calcUN));
+["cGpu","cW","cGen"].forEach(id => $(id).addEventListener("input", calcPC));
+["mL","mA","mP","dL","dA","wP","mMont"].forEach(id => $(id).addEventListener("input", calcCabe));
+["vPix","vParc","vN","vR"].forEach(id => $(id).addEventListener("input", calcVista));
+$("tvD").addEventListener("input", calcTV);
+["kT","kP"].forEach(id => $(id).addEventListener("input", calcCap));
+
+$("alertForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const p = $("aProd").value.trim(), v = $("aPreco").value.replace(/[^\d.,]/g, ""), c = $("aCont").value.trim();
+  $("aErr").hidden = !!p;
+  if (!p) { $("aProd").focus(); return; }
+  const text = `Oi, Neto! Vi o site Desmonta Ofertas e quero criar um alerta de oferta 🔔\n\n🛒 Produto: ${p}${v ? "\n💰 Pago até: R$ " + v : ""}\n📲 Me avisa por ${canal}${c ? ": " + c : " (por aqui mesmo)"}\n\nQuando achar nesse preço, me manda o link com o menor preço e o melhor cupom? Valeu! 🙏`;
+  handoff($("aMsg"), $("aSend"), $("aHint"), text);
+  $("aRes").hidden = false;
+  abrirZap(text);
+});
+$("aCopy").addEventListener("click", () => copyFrom($("aMsg"), "Pedido copiado"));
+$("fbForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const t = $("fbTxt").value.trim(), c = $("fbCont").value.trim();
+  $("fbErr").hidden = !!t;
+  if (!t) { $("fbTxt").focus(); return; }
+  const abre = {"Faltou produto": "Oi, Neto! Vi o site Desmonta Ofertas e senti falta de um produto 🙋", "Deu erro": "Oi, Neto! Vi o site Desmonta Ofertas e encontrei um erro ⚠️", "Sugestão": "Oi, Neto! Vi o site Desmonta Ofertas e tenho uma sugestão 💡", "Elogio": "Oi, Neto! Vi o site Desmonta Ofertas e queria deixar um elogio 👏"}[tipo] || "Oi, Neto! Vi o site Desmonta Ofertas.";
+  const fecha = tipo === "Faltou produto" ? "\n\nConsegue achar pra mim no menor preço e com o melhor cupom? Valeu! 🙏" : "\n\nValeu! 🙏";
+  const msg = `${abre}\n\n${tipo === "Faltou produto" ? "🛒 O que eu quero: " : ""}${t}${c ? "\n📲 Meu contato: " + c : ""}${fecha}`;
+  handoff($("fbMsg"), $("fbSend"), $("fbHint"), msg);
+  $("fbRes").hidden = false;
+  abrirZap(msg);
+});
+$("fbCopy").addEventListener("click", () => copyFrom($("fbMsg"), "Mensagem copiada"));
+
+
+function calcVista() {
+  const pix = num($("vPix").value), tot = num($("vParc").value), n = Math.max(1, Math.round(num($("vN").value))), r = num($("vR").value) / 100;
+  if (!pix || !tot) { $("vRes").className = "res bad"; $("vRes").innerHTML = "<b>Preenche os dois preços</b>"; return; }
+  const parc = tot / n, pv = r > 0 ? parc * (1 - Math.pow(1 + r, -n)) / r : tot;
+  $("vRes").className = "res";
+  $("vRes").innerHTML = pv < pix
+    ? `<b>Parcelar sai melhor</b><p>Em ${n}x de ${brl(parc)}, com o dinheiro rendendo, o parcelado custa hoje o equivalente a ${brl(pv)}: ${brl(pix - pv)} a menos que o Pix.</p>`
+    : `<b>Pagar no Pix sai melhor</b><p>O desconto do Pix vale mais que o rendimento. Você economiza uns ${brl(pv - pix)} pagando à vista.</p>`;
+}
+const TV_SIZES = [32, 40, 43, 50, 55, 58, 60, 65, 70, 75, 85, 98];
+function calcTV() {
+  const d = numDec($("tvD").value) * 100;
+  if (!d) { $("tvRes").className = "res bad"; $("tvRes").innerHTML = "<b>Coloca a distância em metros</b>"; return; }
+  const inch = d / 2.54;
+  const fits = TV_SIZES.filter(x => x >= inch / 1.5 && x <= inch / 1.0);
+  const ideal = TV_SIZES.reduce((a, b) => Math.abs(b - inch / 1.25) < Math.abs(a - inch / 1.25) ? b : a);
+  const fhd = TV_SIZES.filter(x => x >= inch / 2.5 && x <= inch / 1.5);
+  $("tvRes").className = "res";
+  $("tvRes").innerHTML = `<b>TV 4K de ${ideal} polegadas</b><p>Nessa distância, TVs 4K de ${(fits.length ? fits : [ideal]).join(", ")} polegadas ficam boas.${fhd.length ? ` Se for Full HD, fica entre ${fhd[0]} e ${fhd[fhd.length - 1]} polegadas.` : ""}</p><div class="row"><button class="btn sm" type="button" data-find="tv">Ver TVs em oferta</button></div>`;
+}
+const CAP = {
+  geladeira: {q: "geladeira", t: [[2, "250 a 300 litros"], [4, "300 a 400 litros"], [99, "400 litros ou mais"]]},
+  airfryer: {q: "air fryer", t: [[2, "3 a 4 litros"], [4, "5 a 6 litros"], [99, "7 litros ou mais, ou um forno air fryer de 10 a 12 litros"]]},
+  lavar: {q: "lavar", t: [[2, "8 a 11 kg"], [4, "12 a 13 kg"], [99, "14 kg ou mais"]]}
+};
+function calcCap() {
+  const c = CAP[$("kT").value], p = Math.max(1, Math.round(num($("kP").value)));
+  const hit = c.t.find(([max]) => p <= max);
+  $("kRes").className = "res";
+  $("kRes").innerHTML = `<b>${hit[1]}</b><p>É o tamanho que atende bem uma casa com ${p} ${p === 1 ? "pessoa" : "pessoas"}.</p><div class="row"><button class="btn sm" type="button" data-find="${c.q}">Ver em oferta</button></div>`;
+}
+
+/* Ao vivo: confere ofertas novas a cada minuto */
+let nextIn = 60;
+function desmonta() {
+  const d = document.querySelector(".dm");
+  if (!d) return;
+  d.classList.remove("go"); void d.offsetWidth; d.classList.add("go");
+}
+function explode(el) {
+  if (!el) return;
+  el.classList.remove("shine");
+  const txt = el.textContent;
+  el.innerHTML = [...txt].map(ch => ch === " " ? " " : `<span class="boom" style="--bx:${(Math.random() * 16 - 8).toFixed(1)}px;--by:${(Math.random() * 14 - 7).toFixed(1)}px;--br:${Math.round(Math.random() * 40 - 20)}deg">${esc(ch)}</span>`).join("");
+  setTimeout(() => { el.textContent = txt; el.classList.add("shine"); }, 1000);
+}
+async function refreshData() {
+  try {
+    const r = await fetch("ofertas.json", {cache: "no-store"});
+    if (!r.ok) return;
+    const fresh = await r.json();
+    if (fresh && fresh.updated && fresh.updated !== DATA.updated) {
+      Object.assign(DATA, fresh);
+      buildChips(); render(); renderCupons(); renderRel(); renderPed(); updText();
+      toast("Chegaram ofertas novas");
+    }
+  } catch (e) {}
+}
+function liveTick() {
+  nextIn -= 1;
+  if (nextIn <= 0) { explode($("nextLbl")); desmonta(); refreshData(); nextIn = 60; }
+  $("nextT").textContent = Math.floor(nextIn / 60) + ":" + String(nextIn % 60).padStart(2, "0");
+}
+
+/* Canal flutuante */
+const pop = $("pop"), fab = $("fab");
+let popSeen = false;
+try { popSeen = sessionStorage.getItem("dm-pop") === "1"; } catch (e) {}
+function openPop() { pop.hidden = false; fab.classList.add("on"); try { sessionStorage.setItem("dm-pop", "1"); } catch (e) {} }
+function closePop() { pop.hidden = true; fab.classList.remove("on"); }
+fab.addEventListener("click", () => { $("fabTip").hidden = true; if (pop.hidden) openPop(); else closePop(); });
+$("fabTip").addEventListener("click", () => { $("fabTip").hidden = true; openPop(); });
+const FAB_TIPS = ["Ofertas e cupons no nosso canal 👇"];
+let fabTipN = 0;
+function showFabTip() {
+  if (!pop.hidden || !$("sheet").hidden) return;
+  const t = $("fabTip"); t.textContent = FAB_TIPS[fabTipN++ % FAB_TIPS.length]; t.hidden = false;
+  setTimeout(() => { t.hidden = true; }, 4000);
+}
+setTimeout(showFabTip, 20000);
+document.querySelector(".dm").addEventListener("click", desmonta);
+$("popX").addEventListener("click", closePop);
+let drag = null;
+$("popBar").addEventListener("pointerdown", e => { if (e.target.closest("button")) return; const r = pop.getBoundingClientRect(); drag = {dx: e.clientX - r.left, dy: e.clientY - r.top}; try { $("popBar").setPointerCapture(e.pointerId); } catch (er) {} });
+$("popBar").addEventListener("pointermove", e => {
+  if (!drag) return;
+  const x = Math.min(Math.max(8, e.clientX - drag.dx), innerWidth - pop.offsetWidth - 8);
+  const y = Math.min(Math.max(8, e.clientY - drag.dy), innerHeight - pop.offsetHeight - 8);
+  Object.assign(pop.style, {left: x + "px", top: y + "px", right: "auto", bottom: "auto"});
+});
+["pointerup", "pointercancel"].forEach(t => $("popBar").addEventListener(t, () => { drag = null; }));
+
+/* Início */
+try { const saved = localStorage.getItem("dm-theme"); if (saved) document.documentElement.setAttribute("data-theme", saved); } catch (e) {}
+$("cGpu").innerHTML = GPUS.map((g, i) => `<option value="${i}"${g[0] === "RTX 5060" ? " selected" : ""}>${g[0]}</option>`).join("");
+$("rules").innerHTML = RULES.map(r => `<li><b>${CHECK}${esc(r[0])}</b><span>${esc(r[1])}</span></li>`).join("");
+renderCupons(); renderRel(); renderPed();
+buildChips();
+render();
+updText(); setInterval(updText, 30000);
+tick(); setInterval(tick, 1000);
+calcBTU(); calcPB(); calcUN(); calcPC(); calcCabe(); calcVista(); calcTV(); calcCap();
+$("popGo").href = DATA.contato.canal || "#alerta";
+document.querySelectorAll(".nTot").forEach(e => e.textContent = (Math.floor(DATA.items.length / 100) * 100).toLocaleString("pt-BR"));
+setInterval(liveTick, 1000);
+setTimeout(desmonta, 700);
+</script>
+
+</body></html>

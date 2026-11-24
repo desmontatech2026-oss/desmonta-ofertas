@@ -1,0 +1,1374 @@
+{
+ "inicio": "2026-11-12",
+ "shopee_por_rodada": 24,
+ "shopee_qtd": 4,
+ "ml_por_rodada": 12,
+ "ml_qtd": 2,
+ "epocas": [
+  {
+   "ate": "2026-12-25",
+   "cat": "natal",
+   "shopee": 3,
+   "ml": 2
+  },
+  {
+   "de": "2026-11-12",
+   "ate": "2026-11-30",
+   "cat": "games",
+   "shopee": 2,
+   "ml": 2
+  }
+ ],
+ "shopee": [
+  [
+   "arvore de natal",
+   "natal"
+  ],
+  [
+   "controle ps5",
+   "games"
+  ],
+  [
+   "fone bluetooth",
+   "audio"
+  ],
+  [
+   "carregador turbo",
+   "celulares"
+  ],
+  [
+   "ssd",
+   "informatica"
+  ],
+  [
+   "suporte de tv",
+   "tv"
+  ],
+  [
+   "air fryer",
+   "eletro"
+  ],
+  [
+   "jogo de lencol",
+   "casa"
+  ],
+  [
+   "rack para tv",
+   "moveis"
+  ],
+  [
+   "parafusadeira",
+   "ferramentas"
+  ],
+  [
+   "perfume masculino",
+   "beleza"
+  ],
+  [
+   "whey protein",
+   "saude"
+  ],
+  [
+   "tenis masculino",
+   "moda"
+  ],
+  [
+   "roupa bebe",
+   "bebes"
+  ],
+  [
+   "suporte celular carro",
+   "auto"
+  ],
+  [
+   "cama pet",
+   "pet"
+  ],
+  [
+   "lego",
+   "brinquedos"
+  ],
+  [
+   "chocolate",
+   "mercado"
+  ],
+  [
+   "bola de futebol",
+   "esporte"
+  ],
+  [
+   "pisca pisca natal",
+   "natal"
+  ],
+  [
+   "controle ps4",
+   "games"
+  ],
+  [
+   "fone sem fio",
+   "audio"
+  ],
+  [
+   "cabo usb c",
+   "celulares"
+  ],
+  [
+   "pendrive",
+   "informatica"
+  ],
+  [
+   "controle remoto tv",
+   "tv"
+  ],
+  [
+   "liquidificador",
+   "eletro"
+  ],
+  [
+   "toalha de banho",
+   "casa"
+  ],
+  [
+   "mesa dobravel",
+   "moveis"
+  ],
+  [
+   "furadeira",
+   "ferramentas"
+  ],
+  [
+   "perfume feminino",
+   "beleza"
+  ],
+  [
+   "creatina",
+   "saude"
+  ],
+  [
+   "tenis feminino",
+   "moda"
+  ],
+  [
+   "mordedor",
+   "bebes"
+  ],
+  [
+   "aspirador automotivo",
+   "auto"
+  ],
+  [
+   "arranhador gato",
+   "pet"
+  ],
+  [
+   "boneca",
+   "brinquedos"
+  ],
+  [
+   "cafe",
+   "mercado"
+  ],
+  [
+   "halteres",
+   "esporte"
+  ],
+  [
+   "enfeite de natal",
+   "natal"
+  ],
+  [
+   "controle xbox",
+   "games"
+  ],
+  [
+   "caixa de som bluetooth",
+   "audio"
+  ],
+  [
+   "power bank",
+   "celulares"
+  ],
+  [
+   "webcam",
+   "informatica"
+  ],
+  [
+   "projetor",
+   "tv"
+  ],
+  [
+   "ventilador",
+   "eletro"
+  ],
+  [
+   "organizador",
+   "casa"
+  ],
+  [
+   "sapateira",
+   "moveis"
+  ],
+  [
+   "jogo de chaves",
+   "ferramentas"
+  ],
+  [
+   "body splash",
+   "beleza"
+  ],
+  [
+   "massageador",
+   "saude"
+  ],
+  [
+   "camiseta masculina",
+   "moda"
+  ],
+  [
+   "body bebe",
+   "bebes"
+  ],
+  [
+   "capa de banco",
+   "auto"
+  ],
+  [
+   "brinquedo cachorro",
+   "pet"
+  ],
+  [
+   "carrinho controle remoto",
+   "brinquedos"
+  ],
+  [
+   "kit limpeza",
+   "mercado"
+  ],
+  [
+   "tapete yoga",
+   "esporte"
+  ],
+  [
+   "bola de natal",
+   "natal"
+  ],
+  [
+   "headset gamer",
+   "games"
+  ],
+  [
+   "caixa de som karaoke",
+   "audio"
+  ],
+  [
+   "capinha iphone",
+   "celulares"
+  ],
+  [
+   "hub usb",
+   "informatica"
+  ],
+  [
+   "antena digital",
+   "tv"
+  ],
+  [
+   "mixer",
+   "eletro"
+  ],
+  [
+   "luminaria",
+   "casa"
+  ],
+  [
+   "prateleira",
+   "moveis"
+  ],
+  [
+   "kit ferramentas",
+   "ferramentas"
+  ],
+  [
+   "maquiagem",
+   "beleza"
+  ],
+  [
+   "balanca digital",
+   "saude"
+  ],
+  [
+   "vestido",
+   "moda"
+  ],
+  [
+   "kit higiene bebe",
+   "bebes"
+  ],
+  [
+   "lampada led farol",
+   "auto"
+  ],
+  [
+   "coleira",
+   "pet"
+  ],
+  [
+   "pelucia",
+   "brinquedos"
+  ],
+  [
+   "sabao liquido",
+   "mercado"
+  ],
+  [
+   "corda de pular",
+   "esporte"
+  ],
+  [
+   "guirlanda natal",
+   "natal"
+  ],
+  [
+   "mouse gamer",
+   "games"
+  ],
+  [
+   "microfone lapela",
+   "audio"
+  ],
+  [
+   "capinha samsung",
+   "celulares"
+  ],
+  [
+   "suporte notebook",
+   "informatica"
+  ],
+  [
+   "cabo hdmi",
+   "tv"
+  ],
+  [
+   "sanduicheira",
+   "eletro"
+  ],
+  [
+   "jogo de panelas",
+   "casa"
+  ],
+  [
+   "cadeira escritorio",
+   "moveis"
+  ],
+  [
+   "lanterna",
+   "ferramentas"
+  ],
+  [
+   "secador de cabelo",
+   "beleza"
+  ],
+  [
+   "garrafa academia",
+   "saude"
+  ],
+  [
+   "bermuda masculina",
+   "moda"
+  ],
+  [
+   "brinquedo bebe",
+   "bebes"
+  ],
+  [
+   "cheirinho carro",
+   "auto"
+  ],
+  [
+   "tapete higienico",
+   "pet"
+  ],
+  [
+   "jogo de tabuleiro",
+   "brinquedos"
+  ],
+  [
+   "amaciante",
+   "mercado"
+  ],
+  [
+   "camisa de time",
+   "esporte"
+  ],
+  [
+   "presepio",
+   "natal"
+  ],
+  [
+   "teclado gamer",
+   "games"
+  ],
+  [
+   "microfone condensador",
+   "audio"
+  ],
+  [
+   "pelicula celular",
+   "celulares"
+  ],
+  [
+   "ring light",
+   "informatica"
+  ],
+  [
+   "chaleira eletrica",
+   "eletro"
+  ],
+  [
+   "garrafa termica",
+   "casa"
+  ],
+  [
+   "penteadeira",
+   "moveis"
+  ],
+  [
+   "trena",
+   "ferramentas"
+  ],
+  [
+   "prancha de cabelo",
+   "beleza"
+  ],
+  [
+   "luva academia",
+   "saude"
+  ],
+  [
+   "chinelo",
+   "moda"
+  ],
+  [
+   "babador",
+   "bebes"
+  ],
+  [
+   "acessorios moto",
+   "auto"
+  ],
+  [
+   "comedouro",
+   "pet"
+  ],
+  [
+   "brinquedo educativo",
+   "brinquedos"
+  ],
+  [
+   "capsula cafe",
+   "mercado"
+  ],
+  [
+   "acessorios bicicleta",
+   "esporte"
+  ],
+  [
+   "cortina de led",
+   "natal"
+  ],
+  [
+   "mousepad gamer",
+   "games"
+  ],
+  [
+   "fone com fio",
+   "audio"
+  ],
+  [
+   "smartwatch",
+   "celulares"
+  ],
+  [
+   "mochila notebook",
+   "informatica"
+  ],
+  [
+   "cafeteira",
+   "eletro"
+  ],
+  [
+   "copo termico",
+   "casa"
+  ],
+  [
+   "nicho",
+   "moveis"
+  ],
+  [
+   "lavadora alta pressao",
+   "ferramentas"
+  ],
+  [
+   "skincare",
+   "beleza"
+  ],
+  [
+   "termometro",
+   "saude"
+  ],
+  [
+   "bolsa feminina",
+   "moda"
+  ],
+  [
+   "bolsa maternidade",
+   "bebes"
+  ],
+  [
+   "capa de chuva moto",
+   "auto"
+  ],
+  [
+   "areia gato",
+   "pet"
+  ],
+  [
+   "massinha",
+   "brinquedos"
+  ],
+  [
+   "cha",
+   "mercado"
+  ],
+  [
+   "garrafa squeeze",
+   "esporte"
+  ],
+  [
+   "festao natal",
+   "natal"
+  ],
+  [
+   "cadeira gamer",
+   "games"
+  ],
+  [
+   "radio portatil",
+   "audio"
+  ],
+  [
+   "pulseira smartwatch",
+   "celulares"
+  ],
+  [
+   "cartao de memoria",
+   "informatica"
+  ],
+  [
+   "aspirador de po",
+   "eletro"
+  ],
+  [
+   "potes hermeticos",
+   "casa"
+  ],
+  [
+   "estante",
+   "moveis"
+  ],
+  [
+   "alicate",
+   "ferramentas"
+  ],
+  [
+   "protetor solar",
+   "beleza"
+  ],
+  [
+   "medidor de pressao",
+   "saude"
+  ],
+  [
+   "relogio masculino",
+   "moda"
+  ],
+  [
+   "chupeta",
+   "bebes"
+  ],
+  [
+   "carregador veicular",
+   "auto"
+  ],
+  [
+   "bebedouro pet",
+   "pet"
+  ],
+  [
+   "hot wheels",
+   "brinquedos"
+  ],
+  [
+   "azeite",
+   "mercado"
+  ],
+  [
+   "elastico extensor",
+   "esporte"
+  ],
+  [
+   "toalha de mesa natal",
+   "natal"
+  ],
+  [
+   "suporte controle",
+   "games"
+  ],
+  [
+   "suporte celular",
+   "celulares"
+  ],
+  [
+   "adaptador hdmi",
+   "informatica"
+  ],
+  [
+   "mini processador",
+   "eletro"
+  ],
+  [
+   "tapete",
+   "casa"
+  ],
+  [
+   "mesa de escritorio",
+   "moveis"
+  ],
+  [
+   "nivel laser",
+   "ferramentas"
+  ],
+  [
+   "maquina de cortar cabelo",
+   "beleza"
+  ],
+  [
+   "colageno",
+   "saude"
+  ],
+  [
+   "relogio feminino",
+   "moda"
+  ],
+  [
+   "mamadeira",
+   "bebes"
+  ],
+  [
+   "camera de re",
+   "auto"
+  ],
+  [
+   "roupa pet",
+   "pet"
+  ],
+  [
+   "slime",
+   "brinquedos"
+  ],
+  [
+   "chuteira",
+   "esporte"
+  ],
+  [
+   "papai noel decoracao",
+   "natal"
+  ],
+  [
+   "base carregadora controle",
+   "games"
+  ],
+  [
+   "tripe celular",
+   "celulares"
+  ],
+  [
+   "roteador wifi",
+   "informatica"
+  ],
+  [
+   "panela eletrica",
+   "eletro"
+  ],
+  [
+   "travesseiro",
+   "casa"
+  ],
+  [
+   "banqueta",
+   "moveis"
+  ],
+  [
+   "mangueira jardim",
+   "ferramentas"
+  ],
+  [
+   "kit presente masculino",
+   "beleza"
+  ],
+  [
+   "oculos de sol",
+   "moda"
+  ],
+  [
+   "tapete atividades",
+   "bebes"
+  ],
+  [
+   "capacete",
+   "auto"
+  ],
+  [
+   "casinha cachorro",
+   "pet"
+  ],
+  [
+   "quebra cabeca",
+   "brinquedos"
+  ],
+  [
+   "barraca camping",
+   "esporte"
+  ],
+  [
+   "gorro natal",
+   "natal"
+  ],
+  [
+   "controle celular",
+   "games"
+  ],
+  [
+   "carregador por inducao",
+   "celulares"
+  ],
+  [
+   "adaptador wifi usb",
+   "informatica"
+  ],
+  [
+   "batedeira",
+   "eletro"
+  ],
+  [
+   "cortina",
+   "casa"
+  ],
+  [
+   "guarda roupa portatil",
+   "moveis"
+  ],
+  [
+   "caixa de ferramentas",
+   "ferramentas"
+  ],
+  [
+   "kit presente feminino",
+   "beleza"
+  ],
+  [
+   "mochila",
+   "moda"
+  ],
+  [
+   "tapete automotivo",
+   "auto"
+  ],
+  [
+   "caixa de transporte",
+   "pet"
+  ],
+  [
+   "patinete infantil",
+   "brinquedos"
+  ],
+  [
+   "cooler termico",
+   "esporte"
+  ],
+  [
+   "caixa de presente",
+   "natal"
+  ],
+  [
+   "gamepad bluetooth",
+   "games"
+  ],
+  [
+   "teclado sem fio",
+   "informatica"
+  ],
+  [
+   "espremedor",
+   "eletro"
+  ],
+  [
+   "edredom",
+   "casa"
+  ],
+  [
+   "cabeceira",
+   "moveis"
+  ],
+  [
+   "multimetro",
+   "ferramentas"
+  ],
+  [
+   "escova secadora",
+   "beleza"
+  ],
+  [
+   "bone",
+   "moda"
+  ],
+  [
+   "kit pintura infantil",
+   "brinquedos"
+  ],
+  [
+   "amigo secreto",
+   "natal"
+  ],
+  [
+   "suporte headset",
+   "games"
+  ],
+  [
+   "mouse sem fio",
+   "informatica"
+  ],
+  [
+   "umidificador",
+   "eletro"
+  ],
+  [
+   "kit utensilios cozinha",
+   "casa"
+  ],
+  [
+   "paleta de sombra",
+   "beleza"
+  ],
+  [
+   "conjunto feminino",
+   "moda"
+  ],
+  [
+   "dinossauro",
+   "brinquedos"
+  ],
+  [
+   "kit natal",
+   "natal"
+  ],
+  [
+   "case nintendo switch",
+   "games"
+  ],
+  [
+   "ferro de passar",
+   "eletro"
+  ],
+  [
+   "porta tempero",
+   "casa"
+  ],
+  [
+   "batom",
+   "beleza"
+  ],
+  [
+   "cueca",
+   "moda"
+  ],
+  [
+   "boneco de acao",
+   "brinquedos"
+  ],
+  [
+   "luz de natal solar",
+   "natal"
+  ],
+  [
+   "cooler notebook",
+   "games"
+  ],
+  [
+   "forno eletrico",
+   "eletro"
+  ],
+  [
+   "escorredor de louca",
+   "casa"
+  ],
+  [
+   "base liquida",
+   "beleza"
+  ],
+  [
+   "calca jeans",
+   "moda"
+  ],
+  [
+   "estrela arvore natal",
+   "natal"
+  ],
+  [
+   "mesa gamer",
+   "games"
+  ],
+  [
+   "mop",
+   "casa"
+  ],
+  [
+   "serum facial",
+   "beleza"
+  ],
+  [
+   "jaqueta",
+   "moda"
+  ],
+  [
+   "pijama natal",
+   "natal"
+  ],
+  [
+   "lixeira",
+   "casa"
+  ],
+  [
+   "hidratante corporal",
+   "beleza"
+  ],
+  [
+   "moletom",
+   "moda"
+  ],
+  [
+   "vela decorativa",
+   "natal"
+  ],
+  [
+   "varal",
+   "casa"
+  ],
+  [
+   "shampoo",
+   "beleza"
+  ],
+  [
+   "carteira masculina",
+   "moda"
+  ],
+  [
+   "cabide",
+   "casa"
+  ],
+  [
+   "oleo de barba",
+   "beleza"
+  ],
+  [
+   "cinto",
+   "moda"
+  ],
+  [
+   "caixa organizadora",
+   "casa"
+  ],
+  [
+   "barbeador",
+   "beleza"
+  ],
+  [
+   "meia",
+   "moda"
+  ],
+  [
+   "espelho",
+   "casa"
+  ],
+  [
+   "esmalte",
+   "beleza"
+  ],
+  [
+   "sandalia",
+   "moda"
+  ],
+  [
+   "relogio de parede",
+   "casa"
+  ],
+  [
+   "pincel maquiagem",
+   "beleza"
+  ],
+  [
+   "short feminino",
+   "moda"
+  ],
+  [
+   "quadro decorativo",
+   "casa"
+  ],
+  [
+   "camisa social",
+   "moda"
+  ],
+  [
+   "almofada",
+   "casa"
+  ],
+  [
+   "brinco",
+   "moda"
+  ],
+  [
+   "lampada led",
+   "casa"
+  ],
+  [
+   "colar",
+   "moda"
+  ],
+  [
+   "tomada inteligente",
+   "casa"
+  ],
+  [
+   "lampada inteligente",
+   "casa"
+  ],
+  [
+   "camera de seguranca wifi",
+   "casa"
+  ]
+ ],
+ "ml": [
+  [
+   "ps5",
+   "games"
+  ],
+  [
+   "placa de video",
+   "informatica"
+  ],
+  [
+   "iphone",
+   "celulares"
+  ],
+  [
+   "fone de ouvido bluetooth",
+   "audio"
+  ],
+  [
+   "smart tv 43",
+   "tv"
+  ],
+  [
+   "air fryer",
+   "eletro"
+  ],
+  [
+   "arvore de natal",
+   "natal"
+  ],
+  [
+   "perfume masculino",
+   "beleza"
+  ],
+  [
+   "tenis masculino",
+   "moda"
+  ],
+  [
+   "sofa",
+   "moveis"
+  ],
+  [
+   "bicicleta aro 29",
+   "esporte"
+  ],
+  [
+   "whey protein",
+   "saude"
+  ],
+  [
+   "racao cachorro",
+   "pet"
+  ],
+  [
+   "lego",
+   "brinquedos"
+  ],
+  [
+   "furadeira",
+   "ferramentas"
+  ],
+  [
+   "bateria moto",
+   "auto"
+  ],
+  [
+   "fralda",
+   "bebes"
+  ],
+  [
+   "cafe em capsulas",
+   "mercado"
+  ],
+  [
+   "controle dualsense",
+   "games"
+  ],
+  [
+   "processador",
+   "informatica"
+  ],
+  [
+   "celular samsung",
+   "celulares"
+  ],
+  [
+   "caixa de som jbl",
+   "audio"
+  ],
+  [
+   "smart tv 50",
+   "tv"
+  ],
+  [
+   "geladeira frost free",
+   "eletro"
+  ],
+  [
+   "pisca pisca natal",
+   "natal"
+  ],
+  [
+   "perfume feminino",
+   "beleza"
+  ],
+  [
+   "tenis feminino",
+   "moda"
+  ],
+  [
+   "colchao",
+   "moveis"
+  ],
+  [
+   "esteira eletrica",
+   "esporte"
+  ],
+  [
+   "creatina",
+   "saude"
+  ],
+  [
+   "racao gato",
+   "pet"
+  ],
+  [
+   "boneca",
+   "brinquedos"
+  ],
+  [
+   "parafusadeira",
+   "ferramentas"
+  ],
+  [
+   "capacete",
+   "auto"
+  ],
+  [
+   "carrinho de bebe",
+   "bebes"
+  ],
+  [
+   "chocolate",
+   "mercado"
+  ],
+  [
+   "xbox series",
+   "games"
+  ],
+  [
+   "memoria ram",
+   "informatica"
+  ],
+  [
+   "celular motorola",
+   "celulares"
+  ],
+  [
+   "soundbar",
+   "audio"
+  ],
+  [
+   "smart tv 65",
+   "tv"
+  ],
+  [
+   "maquina de lavar",
+   "eletro"
+  ],
+  [
+   "enfeite arvore natal",
+   "natal"
+  ],
+  [
+   "secador de cabelo",
+   "beleza"
+  ],
+  [
+   "mochila",
+   "moda"
+  ],
+  [
+   "guarda roupa",
+   "moveis"
+  ],
+  [
+   "kit halteres",
+   "esporte"
+  ],
+  [
+   "carrinho controle remoto",
+   "brinquedos"
+  ],
+  [
+   "lavadora alta pressao",
+   "ferramentas"
+  ],
+  [
+   "som automotivo",
+   "auto"
+  ],
+  [
+   "cadeirinha carro",
+   "bebes"
+  ],
+  [
+   "sabao liquido",
+   "mercado"
+  ],
+  [
+   "nintendo switch 2",
+   "games"
+  ],
+  [
+   "ssd nvme",
+   "informatica"
+  ],
+  [
+   "celular xiaomi",
+   "celulares"
+  ],
+  [
+   "lava e seca",
+   "eletro"
+  ],
+  [
+   "panetone",
+   "natal"
+  ],
+  [
+   "mala de viagem",
+   "moda"
+  ],
+  [
+   "escrivaninha",
+   "moveis"
+  ],
+  [
+   "pneu aro 14",
+   "auto"
+  ],
+  [
+   "jogos ps5",
+   "games"
+  ],
+  [
+   "notebook",
+   "informatica"
+  ],
+  [
+   "smartwatch",
+   "celulares"
+  ],
+  [
+   "micro-ondas",
+   "eletro"
+  ],
+  [
+   "presente amigo secreto",
+   "natal"
+  ],
+  [
+   "relogio masculino",
+   "moda"
+  ],
+  [
+   "cadeira escritorio",
+   "moveis"
+  ],
+  [
+   "monitor gamer",
+   "games"
+  ],
+  [
+   "notebook gamer",
+   "informatica"
+  ],
+  [
+   "fogao",
+   "eletro"
+  ],
+  [
+   "headset gamer",
+   "games"
+  ],
+  [
+   "tablet",
+   "informatica"
+  ],
+  [
+   "ar condicionado split",
+   "eletro"
+  ],
+  [
+   "cadeira gamer",
+   "games"
+  ],
+  [
+   "ventilador de coluna",
+   "eletro"
+  ],
+  [
+   "aspirador robo",
+   "eletro"
+  ],
+  [
+   "cafeteira expresso",
+   "eletro"
+  ],
+  [
+   "batedeira planetaria",
+   "eletro"
+  ]
+ ]
+}
