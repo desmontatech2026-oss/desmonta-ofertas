@@ -1,6 +1,6 @@
 # Robô do Desmonta Ofertas
 
-Site: https://claude.ai/artifact/Dq6WoNnLHVXvpM4dJm2nJf (artifact público do Neto). Os arquivos do robô ficam na pasta `robo/` do próprio artifact.
+Site: https://desmonta-ofertas.pages.dev (site próprio, Cloudflare Pages + GitHub) e https://claude.ai/artifact/Dq6WoNnLHVXvpM4dJm2nJf (artifact público do Neto, onde ficam os arquivos do robô). Os arquivos do robô ficam na pasta `robo/` do próprio artifact.
 Regra de ouro: o catálogo só cresce. O robô nunca tira oferta do site; só some o que for repetido (o robo.py cuida disso sozinho).
 
 ## Cada rodada
@@ -39,6 +39,11 @@ Regra de ouro: o catálogo só cresce. O robô nunca tira oferta do site; só so
    - Marcar o pedido como "atendido" com o link e o preço, e publicar o `robo/pedidos.json` junto. Na resposta final, listar os pedidos atendidos com o link pronto pro Neto mandar pra quem pediu.
 6. Rodar `python3 robo.py PASTA`. Ele também tira os repetidos (mesma loja + mesmo preço + mesma foto ou mesmo nome); para isso baixe TODAS as folhas `img/fNN.webp` na primeira vez que alguma oferta estiver sem o campo `ph`. Ele soma as novas, tira repetidos, refaz o radar e gera `index.html`, `story.txt` (texto do story, sem link) e `canal.txt` (post do canal, com link).
 7. Publicar no mesmo artifact (url acima): `index.html` como página, mais `ofertas.json`, `robo/pedidos.json`, `robo/robo.py` e `robo/template.txt` quando mudarem, e os arquivos listados em SPRITES_NOVOS (inclui a última folha, se ela foi completada). Sempre passar também `description` com o total atual arredondado pra baixo na centena, no formato "Mais de 3.200 ofertas no ar agora: Shopee, Mercado Livre e Amazon." (é o texto que aparece na prévia do link no WhatsApp). Se o publish recusar por versão nova, ler a versão nova e refazer a partir dela.
+7b. SITE PRÓPRIO (https://desmonta-ofertas.pages.dev, Cloudflare Pages ligado ao GitHub desmontatech2026-oss/desmonta-ofertas, branch main): depois de publicar o artifact, mandar os mesmos arquivos pro GitHub, que a Cloudflare atualiza o site sozinha em ~1 minuto.
+   - Copiar os arquivos pra /mnt/user-data/outputs/site/ (só lá o upload do Chrome aceita).
+   - No Chrome do Neto (já logado no GitHub), abrir https://github.com/desmontatech2026-oss/desmonta-ofertas/upload/main, achar o campo de arquivo ("Choose your files") com o find e mandar `index.html` e `ofertas.json` com o file_upload; esperar aparecerem os nomes e clicar em "Commit changes" por JavaScript (com setTimeout, porque a página navega).
+   - Folhas de foto novas (SPRITES_NOVOS): mesma coisa em https://github.com/desmontatech2026-oss/desmonta-ofertas/upload/main/img. Arquivos do robô que mudaram: em .../upload/main/robo.
+   - Conferir https://desmonta-ofertas.pages.dev: cards aparecendo e o primeiro link indo pra s.shopee.com.br, meli.la ou amazon.com.br. Nunca criar token nem mexer nas configurações do GitHub ou da Cloudflare.
 8. Conferir o site publicado: abrir o link, ver se os cards aparecem e se a foto do primeiro card leva para s.shopee.com.br ou meli.la.
 8b. POSTAR NO CANAL DO WHATSAPP (obrigatório em toda rodada, pedido do Neto em 23/11/2026):
    - revisar o `canal.txt` com nomes curtos e naturais (3 a 6 palavras), o primeiro produto sendo o que mais engatilha a compra (a foto dele vira a prévia);
