@@ -336,9 +336,18 @@ for i in pick:
 story += ['👇 GOSTOU DE ALGUMA?', '1. Toca em LINK DE OFERTAS', '2. Digita o nome do produto na busca', '3. Garante o seu antes que o preço volte!', '',
           f'Mais de {total:,} ofertas te esperando. Achou? Coloca no carrinho pra não perder 🛒'.replace(',', '.'), '',
           '(Figurinha de link com o texto LINK DE OFERTAS + GIF de seta "toque aqui" apontando pra ela)']
+# cupons com código: o que vale pra categoria do produto entra embaixo dele; os melhores vão no bloco "cupons do dia"
+CUPS = [c for c in DATA.get('cupons', []) if c.get('codes') and (not c.get('ate') or c['ate'] >= AGORA.isoformat())]
+def cup_de(i):
+    for c in CUPS:
+        if c['s'] == i['s'] and i['c'] in (c.get('cats') or []):
+            return c
+    return None
+LOJA = {'ml': 'Mercado Livre', 'sp': 'Shopee', 'az': 'Amazon'}
 zap = ['🔥 DESMONTEI OS PREÇOS DE HOJE 🔥', '']
 for i in pick:
-    zap += [f"{EMO.get(i['c'], '🔥')} {curto(i['t'])}", f"De {brl(i['o'])} por {brl(i['p'])} ({i['off']}% OFF)", i['u'], '']
+    cp = cup_de(i)
+    zap += [f"{EMO.get(i['c'], '🔥')} {curto(i['t'])}", f"De {brl(i['o'])} por {brl(i['p'])} ({i['off']}% OFF)"] + ([f"🎟️ CUPOM: {cp['codes'][0]} (testa no carrinho)"] if cp else []) + [i['u'], '']
 ped_pick = [i for i in ok if 'P' in (i.get('f') or '') and i not in pick]
 if ped_pick:
     zap += ['🙋 VOCÊS PEDIRAM, A GENTE ACHOU (menor preço que achamos + cupom):']
@@ -350,6 +359,11 @@ if amz_pick:
     zap += ['🏆 TOP MAIS VENDIDOS DA AMAZON (toca e vê o preço):']
     for i in amz_pick:
         zap += [f"{EMO.get(i['c'], '🔥')} {curto(i['t'])}", i['u']]
+    zap += ['']
+if CUPS:
+    zap += ['🎟️ CUPONS DO DIA (cola no carrinho antes de pagar):']
+    for c in CUPS[:6]:
+        zap += [f"{' / '.join(c['codes'])} → {c['nome'][:1].lower() + c['nome'][1:]} ({LOJA.get(c['s'], '')})"]
     zap += ['']
 zap += [f'👉 Mais de {total:,} ofertas no link da bio. Achou uma boa? Coloca no carrinho pra não perder!'.replace(',', '.'), '', '🤖 Seleção montada com ajuda de IA']
 open(os.path.join(D, 'ofertas.json'), 'w', encoding='utf-8').write(json.dumps(DATA, ensure_ascii=False, separators=(',', ':')))
